@@ -1,19 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {Clouds} from './Components';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Clouds, Landing } from "./Components";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <BrowserRouter>
+      <div className='App'>
         <Clouds />
-        <p>
-          Hello World!
-        </p>
-      </header>
-    </div>
+        <Landing />
+        <p>Hello World!</p>
+      </div>
+    </BrowserRouter>
   );
 }
 
