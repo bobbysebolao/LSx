@@ -27,12 +27,20 @@ function App() {
                     <button onClick={show}>Learn about LSx</button>
                   )}
                   content={hide => (
-                    <Modal>
-                      <h2>About LSx</h2>
-                      This is where the modal text is.
-                      <br />
-                      <button onClick={hide}>X</button>
-                    </Modal>
+            <Modal>
+              <button onClick={hide}>X</button>
+              <h2>
+                About <a href='http://www.lsx.org.uk/'>LSx</a>
+              </h2>
+              <p>
+                London Sustainability Exchange is a “think and do” charity
+                <br />
+                which creates collaborations that address the complex barriers
+                to
+                <br />a sustainable London.
+              </p>
+              <br />
+            </Modal>
                   )}
                 />
               </React.Fragment>
