@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import city from './content/city-day-edited.svg';
+import city from "./content/city-day-edited.svg";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -15,15 +15,13 @@ const GlobalStyle = createGlobalStyle`
         background-repeat: no-repeat;
         background-attachment: scroll;
         background-position: center center;
-
     }
 
     body {
-        padding-top: 500px;
+      margin: 0;
         height: 2000px;
     }
-       
-`;
 
+`;
 
 export default GlobalStyle;
