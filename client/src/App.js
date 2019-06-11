@@ -18,7 +18,6 @@ function App() {
       <div className='App'>
         <Clouds />
         <Landing />
-        <p>Hello World!</p>
       </div>
     </BrowserRouter>
   );

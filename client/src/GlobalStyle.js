@@ -1,9 +1,29 @@
 import { createGlobalStyle } from "styled-components";
+import city from './content/city-day-edited.svg';
 
 const GlobalStyle = createGlobalStyle`
-    body {
-        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Neighbours_Siamese.jpg/640px-Neighbours_Siamese.jpg");
+* {
+    box-sizing: border-box;
+}
+
+@viewport {
+    min-zoom: 50%;
+}
+    html {
+        background: #6e6662;
+        background-image: url(${city});
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+
     }
+
+    body {
+        padding-top: 500px;
+        height: 2000px;
+    }
+       
 `;
+
 
 export default GlobalStyle;
