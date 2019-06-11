@@ -3,11 +3,6 @@ import Button from "../Buttons/Button.js";
 import {ReactComponent as Sign}  from "../../content/signpost-edited.svg";
 import { Nav, Main } from "./Landing.style";
 
-const Signpost = props => { 
-  return (
- <Sign/>
-);}
-
 
 const Landing = props => {
   return (
@@ -17,7 +12,7 @@ const Landing = props => {
       <Button> Start Learning </Button>
       <Button> Make Action Plan </Button>
       <Nav>
-      <Signpost />
+      <Sign />
       </Nav>
     </Main>
   );
