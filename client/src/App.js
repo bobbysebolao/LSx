@@ -10,9 +10,11 @@ const urls = {
 };
 
 function App() {
+
+	const [background, setBackground ] = React.useState('city');
   return (
     <BrowserRouter>
-      <GlobalStyle />
+      <GlobalStyle data = {background}/>
       <div className="App">
         <Switch>
           <Route
@@ -46,7 +48,7 @@ function App() {
               </React.Fragment>
             )}
           />
-          <Route exact path={urls.stories} render={props => <Stories />} />
+          <Route exact path={urls.stories} render={props => { setBackground('comic'); return <Stories />}} />
         </Switch>
       </div>
     </BrowserRouter>
