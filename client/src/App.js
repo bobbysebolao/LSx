@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GlobalStyle from './GlobalStyle';
 
 function App() {
+
 	return (
 		<BrowserRouter>
 			<GlobalStyle />
@@ -22,10 +23,10 @@ function App() {
 						</Modal>
 					)}
 				/>
-				<p>Hello World!</p>
 			</div>
 		</BrowserRouter>
 	);
+
 }
 
 export default App;
