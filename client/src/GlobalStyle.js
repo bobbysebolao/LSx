@@ -15,16 +15,11 @@ const GlobalStyle = createGlobalStyle`
         background-repeat: no-repeat;
         background-attachment: scroll;
         background-position: center center;
-
     }
 
     body {
-        padding-top: 500px;
+      margin: 0;
         height: 2000px;
-    }
-
-    svg:hover & {
-      fill: red;
     }
 
 `;
