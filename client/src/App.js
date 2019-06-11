@@ -6,7 +6,10 @@ import GlobalStyle from "./GlobalStyle";
 
 const urls = {
   home: "/",
-  stories: "/success-stories"
+  stories: "/success-stories",
+  deepdive: "/dive-deeper",
+  experiments: "/experiments",
+  action: "/action-plan"
 };
 
 function App() {

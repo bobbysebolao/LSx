@@ -9,6 +9,13 @@ const Main = styled.main`
   background-position: top center;
   width: 100vw;
   height: 100vh;
+
 `;
 
-export { Main };
+const Header = styled.header`
+  width: 18.5em;
+  margin: auto;
+  padding: 0.75em;
+`
+
+export { Main, Header };
