@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import city from './content/city-day-edited.svg';
+import city from "./content/city-day-edited.svg";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -22,8 +22,11 @@ const GlobalStyle = createGlobalStyle`
         padding-top: 500px;
         height: 2000px;
     }
-       
-`;
 
+    svg:hover & {
+      fill: red;
+    }
+
+`;
 
 export default GlobalStyle;
