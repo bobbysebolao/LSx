@@ -9,7 +9,8 @@ const urls = {
   stories: "/success-stories",
   deepdive: "/dive-deeper",
   experiments: "/experiments",
-  action: "/action-plan"
+  action: "/action-plan",
+  share: "/share"
 };
 
 function App() {
