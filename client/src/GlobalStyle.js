@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-      margin: 0;
+        margin: 0;
         height: 2000px;
     }
 
