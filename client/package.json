@@ -32,5 +32,6 @@
   },
   "devDependencies": {
     "@testing-library/react": "^8.0.1"
-  }
+  },
+   "proxy": "http://localhost:9000"
 }
