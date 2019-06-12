@@ -2,7 +2,6 @@ import React from "react";
 import Button from "../Buttons/Button.js";
 import { Clouds } from "../../Components";
 import { Modal, OpenModal } from "../Modal/Modal";
-// import { ReactComponent as Sign } from '../../content/signpost-edited.svg';
 import Sign from "./Signpost/Sign";
 import * as S from "./Landing.style";
 
@@ -17,9 +16,7 @@ const Landing = props => {
       <S.Nav>
         <OpenModal
           toggle={show => (
-            <React.Fragment>
               <Sign visibility={show} />
-            </React.Fragment>
           )}
           content={hide => (
             <Modal>

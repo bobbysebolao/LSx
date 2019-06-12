@@ -2,7 +2,6 @@ import React from "react";
 
 const Sign = props => {
   return (
-    <React.Fragment>
       <svg
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +74,8 @@ const Sign = props => {
             target="_top"
             className="sign-surface-selector"
             fill="#3D7E9E"
-            opacity="0.00001"
+            opacity="0"
+            style={{cursor:'pointer'}}
             points="13.213,254.227 0,276.723 13.213,299.227 158.541,299.227 158.541,298.096 158.541,295.848 158.541,257.598 158.541,255.348 158.541,254.227"
           />
 
@@ -105,7 +105,7 @@ const Sign = props => {
               points="282.789,209.227 137.449,209.227 137.449,210.348 137.449,212.6 137.449,250.854 137.449,253.108 137.449,254.227 282.789,254.227 296,231.727"
             />
           </a>
-          <a href="https://www.google.com" target="_top" id="sign-three">
+          <a href="/dive-deeper" target="_top" id="sign-three">
             <polygon
               fill="#3D7E9E"
               points="158.541,164.217 158.541,209.217 13.213,209.217 0,186.713 13.213,164.217"
@@ -184,13 +184,7 @@ const Sign = props => {
             />
           </a>
         </g>
-        <button onClick={props.visibility} target="_top" id="sign-five">
-          <rect x="45%" y="70%" width="15.619" height="9.806" />
-        </button>
-        <rect x="45%" y="70%" width="15.619" height="9.806" />
       </svg>
-      <button onClick={props.visibility} target="_top" id="sign-five" />
-    </React.Fragment>
   );
 };
 
