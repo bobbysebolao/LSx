@@ -1,0 +1,28 @@
+{
+  "name": "lsx",
+  "version": "1.0.0",
+  "description": "The LSx Action Planner ===",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FAC-Sixteen/LSx.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FAC-Sixteen/LSx/issues"
+  },
+  "homepage": "https://github.com/FAC-Sixteen/LSx#readme",
+  "dependencies": {
+    "env2": "^2.2.2",
+    "express": "^4.17.1",
+    "nodemailer": "^6.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
