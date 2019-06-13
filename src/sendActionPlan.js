@@ -17,11 +17,11 @@ const sendActionPlan = async (name, email) => {
   let transporter = nodemailer.createTransport(mailConfig);
 
   var mailContent = {
-    from: name || "Hank <worldofhankcraft@gmail.com>",
+    from:  "Hank <worldofhankcraft@gmail.com>",
     to: email || "bobbysebolao@gmail.com", //Change to email address that you want to receive messages on
     subject: "test",
     text: "hello world or something",
-    html: "<h1>hello world or something</h1>"
+    html: `<h1>hello ${name}?</h1>`
   };
 
   let info = await transporter.sendMail(mailContent);
