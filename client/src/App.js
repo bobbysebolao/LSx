@@ -21,7 +21,8 @@ function App() {
 			<GlobalStyle data={background} />
 			<div className="App">
 				<Switch>
-					<Route exact path={urls.home} render={(props) => <Landing><Form /></Landing>} />
+					<Route exact path={urls.home} render={(props) => <Landing/>} />
+					<Route exact path={urls.action} render={(props) => <Form/>} />
 					<Route
 						exact
 						path={urls.stories}
