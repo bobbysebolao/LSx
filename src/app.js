@@ -7,12 +7,19 @@ const sendActionPlan = require("./sendActionPlan");
 require("env2")("./config.env");
 
 const app = express();
+
 app.disable("x-powered -by");
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "..", "client", "build")));
 
 app.get("/express_backend", (req, res) => {
   res.send({ express: " YOUR BACKEND IS CONNECTED TO REACT" });
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
 });
 
 app.post("/send", (req, res, next) => {

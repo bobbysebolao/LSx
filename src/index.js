@@ -1,4 +1,3 @@
-const sendActionPlan = require("./sendActionPlan");
 const app = require("./app");
 
 app.listen(app.get("PORT"), () => {
