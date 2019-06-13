@@ -36,10 +36,15 @@ const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         height: 1948px;
+        font-family: "Lato", sans-serif;
     }
 
     h1, h2, h3, h4, h5, h6, text {
       font-family: 'Londrina Solid', cursive;
+    }
+
+    p, button {
+
     }
 
 `;

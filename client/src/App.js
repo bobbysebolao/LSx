@@ -1,13 +1,13 @@
-
 import React from 'react';
 import './App.css';
-import { Landing, Stories, Form, Deepdive } from './Components';
+import { Landing, Stories, Form, Deepdive, Story } from './Components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GlobalStyle from './GlobalStyle';
 
 const urls = {
 	home: '/',
 	stories: '/success-stories',
+	story: '/story',
 	deepdive: '/dive-deeper',
 	experiments: '/experiments',
 	action: '/action-plan',
@@ -21,8 +21,8 @@ function App() {
 			<GlobalStyle data={background} />
 			<div className="App">
 				<Switch>
-					<Route exact path={urls.home} render={(props) => <Landing/>} />
-					<Route exact path={urls.action} render={(props) => <Form/>} />
+					<Route exact path={urls.home} render={(props) => <Landing />} />
+					<Route exact path={urls.action} render={(props) => <Form />} />
 					<Route
 						exact
 						path={urls.stories}
@@ -31,9 +31,15 @@ function App() {
 							return <Stories />;
 						}}
 					/>
-          <Route exact path={urls.deepdive} render={(props) => {
-          setBackground('park')
-          return (<Deepdive />);}} />
+					<Route exact path={urls.story} render={(props) => <Story />} />
+					<Route
+						exact
+						path={urls.deepdive}
+						render={(props) => {
+							setBackground('park');
+							return <Deepdive />;
+						}}
+					/>
 				</Switch>
 			</div>
 		</BrowserRouter>
