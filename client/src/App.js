@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './App.css';
-import { Landing, Stories, Form } from './Components';
+import { Landing, Stories, Form, Deepdive } from './Components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GlobalStyle from './GlobalStyle';
 
@@ -30,6 +30,9 @@ function App() {
 							return <Stories />;
 						}}
 					/>
+          <Route exact path={urls.deepdive} render={(props) => {
+          setBackground('park')
+          return (<Deepdive />);}} />
 				</Switch>
 			</div>
 		</BrowserRouter>

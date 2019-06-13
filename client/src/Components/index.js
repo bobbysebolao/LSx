@@ -1,7 +1,6 @@
-import Clouds from "./Landing/Clouds/Clouds.js";
 import Landing from "./Landing/Landing.js";
-import { Modal, OpenModal } from "./Modal/Modal";
 import Stories from "./Stories/Stories.js";
 import { Form } from "./Form/Form.js";
+import Deepdive from "./Deepdive/Deepdive.js"
 
-export { Clouds, Landing, Modal, OpenModal, Stories, Form };
+export { Landing, Stories, Form, Deepdive };
