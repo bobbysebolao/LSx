@@ -1,12 +1,14 @@
+
 import React from "react";
 import "./App.css";
-import { Landing, Stories, Form, Deepdive, Error404 } from "./Components";
+import { Landing, Stories, Form, Deepdive, Error404, Story } from "./Components";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import GlobalStyle from "./GlobalStyle";
 
 const urls = {
   home: "/",
   stories: "/success-stories",
+  story: '/story',
   deepdive: "/dive-deeper",
   experiments: "/experiments",
   action: "/action-plan",
@@ -22,6 +24,7 @@ function App() {
         <Switch>
           <Route exact path={urls.home} render={props => <Landing />} />
           <Route exact path={urls.action} render={props => <Form />} />
+    	<Route exact path={urls.story} render={(props) => <Story />} />
           <Route
             exact
             path={urls.stories}
@@ -43,6 +46,7 @@ function App() {
       </div>
     </BrowserRouter>
   );
+
 }
 
 export default App;
