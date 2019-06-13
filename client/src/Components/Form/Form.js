@@ -14,7 +14,7 @@ const Form = props => {
         email: `${email}`
       })
     })
-      .then(response => response.json)
+      .then(response => response.json())
       .then(json => console.log("handleSubmit: ", json));
   };
 

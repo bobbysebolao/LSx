@@ -25,12 +25,11 @@ app.post("/send", (req, res, next) => {
     // Assuming, we're receiving JSON, parse the string into a JSON object to return.
     var data = JSON.parse(content);
     console.log("jump up and down", data);
+    sendActionPlan(data.name, data.email);
   });
 
   console.log("header", req);
   // insert rest of form inputs
-
-  sendActionPlan("henners", "hrmstockdale@gmail.com");
 });
 
 app.set("PORT", process.env.PORT || 9000);
