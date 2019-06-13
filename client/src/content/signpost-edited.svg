@@ -12,21 +12,24 @@ viewBox='0 0 296 650.174'>
             <rect x='137.498' y='58.492' width='21.094' height='15.716' />
         </g>
         <g class='sign-six'>
+          
           <a xlink:href='https://www.google.co.uk/' target='_top'>
             <polygon fill='#3D7E9E' points='137.449,299.237 137.449,344.237 282.789,344.237 296,321.737 282.789,299.237'
             />
             <polygon fill='#FFF' points='137.449,343.118 282.443,343.118 294.988,321.743 282.572,300.358 137.449,300.358 137.449,302.61 282.018,302.61 293.127,321.737 281.896,340.864 137.449,340.864'
             />
+            <text class="sign-text" x="52%" y="50.5%" fill='white' style="text-anchor: start; font-weight:bold; font-size: 1.2em">Start planning</text>
             <polygon class='sign-surface-selector' fill='none' points='282.789,299.237 137.449,299.237 137.449,300.358 137.449,302.61 137.449,340.864 137.449,343.118 137.449,344.237 282.789,344.237 296,321.737'
             />
             </a>
         </g>
         <g id='sign-five'>
-          <a xlink:href='https://www.google.co.uk/' target='_top'>
+          <a target='_top'>
             <polygon fill='#3D7E9E' points='158.541,254.227 158.541,299.227 13.213,299.227 0,276.723 13.213,254.227'
             />
             <polygon fill='#FFF' points='158.541,298.096 13.559,298.096 1.008,276.723 13.436,255.348 158.541,255.348 158.541,257.598 13.984,257.598 2.873,276.719 14.107,295.848 158.541,295.848'
             />
+            <text class="sign-text" x="48%" y="43.5%" fill="white" style="text-anchor: end">Learn about LSx</text>
             <polygon class='sign-surface-selector' fill='none' points='13.213,254.227 0,276.723 13.213,299.227 158.541,299.227 158.541,298.096 158.541,295.848 158.541,257.598 158.541,255.348 158.541,254.227'
             />
           </a>
@@ -37,6 +40,7 @@ viewBox='0 0 296 650.174'>
             />
             <polygon fill='#FFF' points='137.449,253.108 282.443,253.108 294.988,231.733 282.572,210.348 137.449,210.348 137.449,212.6 282.018,212.6 293.127,231.727 281.896,250.854 137.449,250.854'
             />
+            <text class="sign-text" x="52%" y="36.5%" fill="white" style="text-anchor: start">Spread the word</text>
             <polygon class='sign-surface-selector' fill='none' points='282.789,209.227 137.449,209.227 137.449,210.348 137.449,212.6 137.449,250.854 137.449,253.108 137.449,254.227 282.789,254.227 296,231.727'
             />
           </a>
@@ -47,6 +51,7 @@ viewBox='0 0 296 650.174'>
             />
             <polygon fill='#FFF' points='159.541,208.086 14.559,208.086 2.008,186.713 14.436,165.338 159.541,165.338 159.541,167.588 14.984,167.588 3.873,186.709 15.107,205.838 159.541,205.838'
             />
+            <text class="sign-text" x="48%" y="29.6%" fill="white" style="text-anchor: end">Dive into the data</text>
             <polygon class='sign-surface-selector' fill='none' points='13.213,164.217 0,186.713 13.213,209.217 158.541,209.217 158.541,208.086 158.541,205.838 158.541,167.588 158.541,165.338 158.541,164.217'
             />
           </a>
@@ -57,16 +62,18 @@ viewBox='0 0 296 650.174'>
             />
             <polygon fill='#FFF' points='137.449,163.099 282.443,163.099 294.988,141.723 282.572,120.339 137.449,120.339 137.449,122.59 282.018,122.59 293.127,141.718 281.896,160.845 137.449,160.845'
             />
+            <text class="sign-text" x="52%" y="22.6%" fill="white" style="text-anchor: start">Collect some data</text>
             <polygon class='sign-surface-selector' fill='none' points='282.789,119.217 137.449,119.217 137.449,120.339 137.449,122.59 137.449,160.845 137.449,163.099 137.449,164.217 282.789,164.217 296,141.718'
             />
           </a>
         </g>
         <g id='sign-one'>
-          <a xlink:href='https://www.google.co.uk/' target='_top'>
+          <a xlink:href='/success-stories' target='_top'>
             <polygon fill='#3D7E9E' points='158.541,74.208 158.541,119.208 13.213,119.208 0,96.705 13.213,74.208'
             />
             <polygon fill='#FFF' points='158.541,118.078 13.559,118.078 1.008,96.705 13.436,75.329 158.541,75.329 158.541,77.579 13.984,77.579 2.873,96.7 14.107,115.829 158.541,115.829'
             />
+            <text class="sign-text" x="48%" y="15.8%" fill="white" style="text-anchor: end">Success stories</text>
             <polygon class='sign-surface-selector' fill='none' points='13.213,74.208 0,96.705 13.213,119.208 158.541,119.208 158.541,118.078 158.541,115.829 158.541,77.579 158.541,75.329 158.541,74.208'
             />
           </a>

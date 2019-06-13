@@ -6,6 +6,7 @@ const Nav = styled.section`
 
 const Main = styled.main`
   width: 100%;
+  padding-top: 600px;
 `;
 
 export { Nav, Main };
