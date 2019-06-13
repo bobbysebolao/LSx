@@ -1,6 +1,7 @@
+
 import React from 'react';
 import './App.css';
-import { Landing, Stories, Deepdive } from './Components';
+import { Landing, Stories, Form, Deepdive } from './Components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GlobalStyle from './GlobalStyle';
 
@@ -20,7 +21,7 @@ function App() {
 			<GlobalStyle data={background} />
 			<div className="App">
 				<Switch>
-					<Route exact path={urls.home} render={(props) => <Landing />} />
+					<Route exact path={urls.home} render={(props) => <Landing><Form /></Landing>} />
 					<Route
 						exact
 						path={urls.stories}
