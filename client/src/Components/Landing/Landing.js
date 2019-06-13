@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Buttons/Button.js";
-import { Clouds } from "../../Components";
+import Clouds from "./Clouds/Clouds";
 import { Modal, OpenModal } from "../Modal/Modal";
 import Sign from "./Signpost/Sign";
 import * as S from "./Landing.style";
