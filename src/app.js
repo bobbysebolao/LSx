@@ -3,8 +3,9 @@ const path = require("path");
 const bodyParser = require("body-parser");
 
 const sendActionPlan = require("./sendActionPlan");
+const fetchSuccessData = require("./getSuccessStories");
 
-require("env2")("./config.env");
+require("env2")("./.env");
 
 const app = express();
 
@@ -16,6 +17,12 @@ app.use(express.static(path.join(__dirname, "..", "client", "build")));
 
 app.get("/express_backend", (req, res) => {
   res.send({ express: " YOUR BACKEND IS CONNECTED TO REACT" });
+});
+
+app.get("/success-data", (req, res) => {
+  fetchSuccessData() 
+  .then(response => {
+    res.send(response)})
 });
 
 app.get("*", (req, res) => {
