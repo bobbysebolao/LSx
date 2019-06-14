@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 
 const sendActionPlan = require("./sendActionPlan");
 
-require("env2")("./config.env");
+require("env2")("./.env");
 
 const app = express();
 
