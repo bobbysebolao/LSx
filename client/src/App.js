@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 import {
   Landing,
   Stories,
@@ -8,7 +10,7 @@ import {
   Error404,
   Story
 } from "./Components";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { dataRequest } from "./utils/fetchData.js";
 import GlobalStyle from "./GlobalStyle";
 
 const urls = {
@@ -23,6 +25,13 @@ const urls = {
 
 function App() {
   const [background, setBackground] = React.useState("city");
+  const [successStories, setSuccessStories] = React.useState(null);
+
+  React.useEffect(() => {
+    dataRequest("http://localhost:3000/success-data").then(res =>
+      setSuccessStories(res)
+    );
+  }, []);
 
   return (
     <BrowserRouter>
@@ -31,13 +40,17 @@ function App() {
         <Switch>
           <Route exact path={urls.home} render={props => <Landing />} />
           <Route exact path={urls.action} render={props => <Form />} />
-          <Route exact path={urls.story} render={props => <Story />} />
+          <Route
+            exact
+            path={urls.story}
+            render={props => <Story data={successStories} />}
+          />
           <Route
             exact
             path={urls.stories}
             render={props => {
               setBackground("comic");
-              return <Stories />;
+              return <Stories data={successStories} />;
             }}
           />
           <Route

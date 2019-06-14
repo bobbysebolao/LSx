@@ -8,10 +8,10 @@ const checkResponse = response => {
         <p>Ideas will come later</p>
       </React.Fragment>
     );
+}
 
     return response.json();
-  }
-};
+  };
 
 const dataRequest = url => {
   return fetch(url)

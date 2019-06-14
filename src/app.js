@@ -20,7 +20,6 @@ app.get("/express_backend", (req, res) => {
 });
 
 app.get("/success-data", (req, res) => {
-
   fetchSuccessData() 
   .then(response => {
     res.send(response)})

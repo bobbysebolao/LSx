@@ -1,7 +1,10 @@
 import React from 'react';
 import * as S from './Stories.style';
 
-const Stories = (props) => {
+const Stories = ({ data }) => {
+
+console.log(data)
+
 	return (
 		<S.Main>
 			<S.Header>
