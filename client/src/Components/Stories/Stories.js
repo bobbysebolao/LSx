@@ -4,6 +4,12 @@ import * as S from "./Stories.style";
 const Stories = ({ data }) => {
   // const [storiesData, setStoriesData] = React.useState(null);
 
+  const hyphenate = endpoint => {
+    if (endpoint.includes(" ")) {
+      return endpoint.replace(" ", "-");
+    }
+  };
+
   React.useEffect(
     () => {
       if (data) {
@@ -26,7 +32,13 @@ const Stories = ({ data }) => {
       </S.Header>
       {/* Foreach row in the spreadsheet, generate new book, using the incrementer to make an id and give the x and y co-ordinate somehow*/}
       <S.Shelf>
-        {data ? data.map((k, i) => <S.Comic key={k["Title"]} />) : null}
+        {data
+          ? data.map((k, i) => (
+              <a href={hyphenate(`${k["Title"]}`).toLowerCase()}>
+                <S.Comic key={k["Title"]} />
+              </a>
+            ))
+          : null}
       </S.Shelf>
     </S.Main>
   );
