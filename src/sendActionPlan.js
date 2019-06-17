@@ -1,28 +1,31 @@
 const nodemailer = require("nodemailer");
 require("env2")("./.env");
+const TESTACC = process.env.TESTACC;
+const TESTPASS = process.env.TESTPASS;
 
-const sendActionPlan = async (name, email, answers) => {
-  let testAccount = await nodemailer.createTestAccount();
+const sendActionPlan = (name, email, answers) => {
+  // let testAccount = await nodemailer.createTestAccount();
+
 
   let mailConfig = {
-    host: "smtp.ethereal.email",
+    host: "smtp-mail.outlook.com",
     port: 587,
     secure: false,
     auth: {
-      user: testAccount.user,
-      pass: testAccount.pass
+      user: TESTACC,
+      pass: TESTPASS
     }
   };
 
   let transporter = nodemailer.createTransport(mailConfig);
 
   var mailContent = {
-    from: "Hank <worldofhankcraft@gmail.com>",
+    from: TESTACC,
     to: email || "bobbysebolao@gmail.com", //Change to email address that you want to receive messages on
-    subject: "test",
-    text: "hello world or something",
-    html: `<h1>hello ${name}?</h1>
-    <table>
+    subject: "Your Action Plan",
+    text: `hello ${name}`,
+    html: `<h1>My Action Plan</h1>
+   
       <h2>What do you want to change?</h2>
       <p>${answers.q1}</p>
       
@@ -37,12 +40,16 @@ const sendActionPlan = async (name, email, answers) => {
       
       <h2>How will you communicate your message?</h2>
       <p>${answers.q5}</p>
-    </table>`
+    `
   };
 
-  let info = await transporter.sendMail(mailContent);
-  console.log("message sent", info.messageId);
-  console.log("Preview URL:", nodemailer.getTestMessageUrl(info));
+  transporter
+   .sendMail(mailContent)
+   .then(success => console.log('success', success))
+   .catch(error => console.log('error', error));
+
+  // console.log("message sent", info.messageId);
+  // console.log("Preview URL:", nodemailer.getTestMessageUrl(info));
 };
 
 module.exports = sendActionPlan;
