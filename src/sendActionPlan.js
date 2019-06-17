@@ -22,6 +22,7 @@ const sendActionPlan = async (name, email, answers) => {
     subject: "test",
     text: "hello world or something",
     html: `<h1>hello ${name}?</h1>
+    <table>
       <h2>What do you want to change?</h2>
       <p>${answers.q1}</p>
       
@@ -35,7 +36,8 @@ const sendActionPlan = async (name, email, answers) => {
       <p>${answers.q4}</p>
       
       <h2>How will you communicate your message?</h2>
-      <p>${answers.q5}</p>`
+      <p>${answers.q5}</p>
+    </table>`
   };
 
   let info = await transporter.sendMail(mailContent);
