@@ -4,6 +4,7 @@ const Clouds = props => {
   return (
     <div>
       <svg
+        data-testid='svg1'
         id='Layer_1'
         xmlns='http://www.w3.org/2000/svg'
         width='125.365'
@@ -17,6 +18,7 @@ const Clouds = props => {
       </svg>
 
       <svg
+        data-testid='svg2'
         id='Layer_1'
         xmlns='http://www.w3.org/2000/svg'
         width='343.854'
