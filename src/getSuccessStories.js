@@ -12,12 +12,23 @@ const base = new Airtable({ apiKey }).base(baseKey);
 
 const getSuccessStories = () => {
   return new Promise((resolve, reject) => {
-    base("Success Stories").find("recYlANb7d91uIwd8", function(err, record) {
-      if (err) {
-        reject(err);
-      }
-      resolve(record._rawJson);
-    });
+    base("Success Stories")
+      .select()
+      .eachPage(
+        function page(records) {
+          let result = {};
+          records.forEach((record, i) => {
+            result[i] = record.fields;
+          });
+          resolve(result);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+            reject(err);
+          }
+        }
+      );
   });
 };
 
