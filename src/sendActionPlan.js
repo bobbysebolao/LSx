@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-require("env2")("./config.env");
+require("env2")("./.env");
 
 const sendActionPlan = async (name, email) => {
   let testAccount = await nodemailer.createTestAccount();
