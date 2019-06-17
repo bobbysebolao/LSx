@@ -7,7 +7,8 @@ const sendActionPlan = (name, email, answers) => {
   return new Promise((resolve, reject) => {
 
     let mailConfig = {
-      host: "smtp-mail.outlook.com",
+      service: 'gmail',
+      host: "smtp.gmail.com",
       port: 587,
       secure: false,
       auth: {
