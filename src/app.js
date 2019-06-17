@@ -39,7 +39,8 @@ app.post("/send", (req, res, next) => {
     // Assuming, we're receiving JSON, parse the string into a JSON object to return.
     var data = JSON.parse(content);
     sendActionPlan(data.name, data.email, data.answers)
-    .then(result => res.send(result))
+      .then(result => res.send(result))
+      .catch(err => res.send({ failure: 500, error: err }));
   });
   // insert rest of form inputs
 });
