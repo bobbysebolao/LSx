@@ -16,10 +16,11 @@ const getSuccessStories = () => {
       .select()
       .eachPage(
         function page(records) {
-          let result = {};
-          records.forEach((record, i) => {
-            result[i] = record.fields;
+          let result = [];
+          records.forEach((record) => {
+              result.push(record.fields);
           });
+          result.shift();
           resolve(result);
         },
         function done(err) {
