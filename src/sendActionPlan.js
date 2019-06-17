@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 require("env2")("./.env");
 
-const sendActionPlan = async (name, email) => {
+const sendActionPlan = async (name, email, answers) => {
   let testAccount = await nodemailer.createTestAccount();
 
   let mailConfig = {
@@ -17,11 +17,27 @@ const sendActionPlan = async (name, email) => {
   let transporter = nodemailer.createTransport(mailConfig);
 
   var mailContent = {
-    from:  "Hank <worldofhankcraft@gmail.com>",
+    from: "Hank <worldofhankcraft@gmail.com>",
     to: email || "bobbysebolao@gmail.com", //Change to email address that you want to receive messages on
     subject: "test",
     text: "hello world or something",
-    html: `<h1>hello ${name}?</h1>`
+    html: `<h1>hello ${name}?</h1>
+    <table>
+      <h2>What do you want to change?</h2>
+      <p>${answers.q1}</p>
+      
+      <h2>Why do you want to change it?</h2>
+      <p>${answers.q2}</p>
+      
+      <h2>Who's behaviour do you want to change?</h2>
+      <p>${answers.q3}</p>
+      
+      <h2>What barriers do you foresee?</h2>
+      <p>${answers.q4}</p>
+      
+      <h2>How will you communicate your message?</h2>
+      <p>${answers.q5}</p>
+    </table>`
   };
 
   let info = await transporter.sendMail(mailContent);

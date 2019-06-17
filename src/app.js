@@ -20,9 +20,9 @@ app.get("/express_backend", (req, res) => {
 });
 
 app.get("/success-data", (req, res) => {
-  fetchSuccessData() 
-  .then(response => {
-    res.send(response)})
+  fetchSuccessData().then(response => {
+    res.send(response);
+  });
 });
 
 app.get("*", (req, res) => {
@@ -39,7 +39,7 @@ app.post("/send", (req, res, next) => {
     // Assuming, we're receiving JSON, parse the string into a JSON object to return.
     var data = JSON.parse(content);
     console.log("jump up and down", data);
-    sendActionPlan(data.name, data.email);
+    sendActionPlan(data.name, data.email, data.answers);
   });
 
   console.log("header", req);
