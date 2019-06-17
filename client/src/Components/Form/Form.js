@@ -1,4 +1,5 @@
 import React from "react";
+import * as S from "./Form.style"
 
 const Form = props => {
   const [name, setName] = React.useState("");
@@ -31,10 +32,14 @@ const Form = props => {
   };
 
   return (
-    <React.Fragment>
+    <S.Wrapper>
       <h1>
         Create an Action Plan <br />& Email it to yourself
       </h1>
+
+      <p>All action starts with a plan - and we’re here to help you make yours!
+
+Take the first step and complete this short form</p>
       <form onSubmit={handleSubmit}>
         <label>
           name
@@ -111,7 +116,7 @@ const Form = props => {
 
         <input type='submit' value='Submit' />
       </form>
-    </React.Fragment>
+    </S.Wrapper>
   );
 };
 
