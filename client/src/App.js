@@ -16,7 +16,7 @@ import GlobalStyle from "./GlobalStyle";
 const urls = {
   home: "/",
   stories: "/success-stories",
-  story: "/story",
+  story: "/story/:story",
   deepdive: "/dive-deeper",
   experiments: "/experiments",
   action: "/action-plan",
@@ -43,7 +43,7 @@ function App() {
           <Route
             exact
             path={urls.story}
-            render={props => <Story data={successStories} />}
+            render={props => <Story data={successStories} {...props} />}
           />
           <Route
             exact

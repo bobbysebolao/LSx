@@ -1,26 +1,8 @@
 import React from "react";
 import * as S from "./Stories.style";
+import hyphenate from "../../utils/hyphenate.js";
 
 const Stories = ({ data }) => {
-  // const [storiesData, setStoriesData] = React.useState(null);
-
-  const hyphenate = endpoint => {
-    if (endpoint.includes(" ")) {
-      return endpoint.replace(" ", "-");
-    }
-  };
-
-  React.useEffect(
-    () => {
-      if (data) {
-        console.log("Hello", data);
-        // setStoriesData(Object.keys(data));
-        // console.log("this is storiesdata", storiesData);
-      }
-    },
-    [data]
-  );
-
   return (
     <S.Main>
       <S.Header>
@@ -34,7 +16,7 @@ const Stories = ({ data }) => {
       <S.Shelf>
         {data
           ? data.map((k, i) => (
-              <a href={hyphenate(`${k["Title"]}`).toLowerCase()}>
+              <a href={hyphenate(`/story/${k["Title"]}`).toLowerCase()}>
                 <S.Comic key={k["Title"]} />
               </a>
             ))
