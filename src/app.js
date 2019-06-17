@@ -38,11 +38,9 @@ app.post("/send", (req, res, next) => {
   req.on("end", function() {
     // Assuming, we're receiving JSON, parse the string into a JSON object to return.
     var data = JSON.parse(content);
-    console.log("jump up and down", data);
-    sendActionPlan(data.name, data.email, data.answers);
+    sendActionPlan(data.name, data.email, data.answers)
+    .then(result => res.send(result))
   });
-
-  console.log("header", req);
   // insert rest of form inputs
 });
 
