@@ -2,7 +2,14 @@ import React from "react";
 import * as S from "./Stories.style";
 
 const Stories = ({ data }) => {
-  console.log("Hello", data);
+  React.useEffect(
+    () => {
+      if (data) {
+        console.log("Hello", Object.keys(data).length);
+      }
+    },
+    [data]
+  );
 
   return (
     <S.Main>
