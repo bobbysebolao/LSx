@@ -16,14 +16,36 @@ const Share = props => {
           Reaching other groups fighting pollution is essential to reaching your
           objectives and bringing about change to your local community.
         </p>
-        <SharePerson1 />
-        <S.SpeechBubble>"Person_12"</S.SpeechBubble>
-        <SharePerson2 />
-        <S.SpeechBubble>"Person_12"</S.SpeechBubble>
-        <SharePerson3 />
-        <S.SpeechBubble>"Person_12"</S.SpeechBubble>
-        <SharePerson4 />
-        <S.SpeechBubble>"Person_12"</S.SpeechBubble>
+        <S.FlexWrapLeft>
+          <SharePerson1 />
+        </S.FlexWrapLeft>
+        <S.SpeechBubble>
+          "I organised a carpool to cut emissions near my children's school."
+        </S.SpeechBubble>
+
+        <S.FlexWrapRight>
+          <SharePerson2 />
+        </S.FlexWrapRight>
+        <S.SpeechBubbleRight>
+          "I held a science fair for my year five students. We shared our
+          findings with other schools."
+        </S.SpeechBubbleRight>
+
+        <S.FlexWrapLeft>
+          <SharePerson3 />
+        </S.FlexWrapLeft>
+        <S.SpeechBubble>
+          "After conducting my experiment, I shared my findings online and was
+          <b> retweeted</b> by my local MP."
+        </S.SpeechBubble>
+
+        <S.FlexWrapRight>
+          <SharePerson4 />
+        </S.FlexWrapRight>
+        <S.SpeechBubbleRight>
+          "My scout group made a facebook event to lay hedges for the local
+          park. Many hands made light work"
+        </S.SpeechBubbleRight>
       </S.Container>
     </React.Fragment>
   );
