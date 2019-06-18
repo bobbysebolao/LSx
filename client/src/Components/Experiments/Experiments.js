@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Buttons/Button.js";
+import { Button } from "../Buttons/Button.js";
 import * as S from "./Experiments.style";
 import hyphenate from "../../utils/hyphenate.js";
 
@@ -25,6 +25,7 @@ const Experiments = ({ data }) => {
             ))
           : null}
       </S.Board>
+      <Button link="/#signpost">Back</Button>
     </S.Main>
   );
 };

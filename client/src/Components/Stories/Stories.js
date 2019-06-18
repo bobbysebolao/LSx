@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./Stories.style";
 import hyphenate from "../../utils/hyphenate.js";
+import { Button } from "../Buttons/Button.js";
 
 const Stories = ({ data }) => {
   return (
@@ -22,6 +23,7 @@ const Stories = ({ data }) => {
             ))
           : null}
       </S.Shelf>
+      <Button link="/#signpost">Back</Button>
     </S.Main>
   );
 };

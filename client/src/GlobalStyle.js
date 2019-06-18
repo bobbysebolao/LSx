@@ -38,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
         background-repeat: no-repeat;
         background-attachment: scroll;
         background-position: top center;
+        scroll-behavior: smooth;
     }
 
     body {
@@ -48,11 +49,21 @@ const GlobalStyle = createGlobalStyle`
 
     h1, h2, h3, h4, h5, h6, text {
       font-family: 'Londrina Solid', cursive;
+      margin: 0;
     }
 
-    p, button {
-
+    h1 {
+      font-size: 6rem;
     }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    h3 {
+      font-weight: 300;
+    }
+
 
 `;
 
