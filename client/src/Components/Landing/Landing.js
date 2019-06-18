@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Buttons/Button.js";
+import { Button, Submit } from "../Buttons/Button.js";
 import Clouds from "./Clouds/Clouds";
 import { Modal, OpenModal } from "../Modal/Modal";
 import Sign from "./Signpost/Sign";
@@ -12,7 +12,7 @@ const Landing = props => {
       <h1>LSx</h1>
       <h2>Action Planner</h2>
       <S.ButtonContainer>
-      <Button link="#signpost"> Start Learning </Button>
+      <Submit link="#signpost"> Start Learning </Submit>
       <Button link="/action-plan"> Make Action Plan </Button>
       </S.ButtonContainer>
       <S.Nav id="signpost">

@@ -1,6 +1,6 @@
 import React from "react";
 import Oldlady from "../Oldlady/Oldlady.js";
-import Button from "../Buttons/Button.js";
+import { Button } from "../Buttons/Button.js";
 
 const Error404 = () => {
   return (

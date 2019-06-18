@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./Story.style";
 import hyphenate from "../../utils/hyphenate.js";
-import Button from "../Buttons/Button.js";
+import { Button } from "../Buttons/Button.js";
 
 const Story = props => {
   const [storyData, setStoryData] = React.useState(null);
@@ -21,7 +21,7 @@ const Story = props => {
 
   React.useEffect(() => {
     selectStory(props);
-  }, []);
+  }, [props]);
 
   if (storyData) {
     console.log(storyData);

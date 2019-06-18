@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./Form.style";
-import Button from "../Buttons/Button.js";
+import { Button, Submit } from "../Buttons/Button.js";
 
 const Form = props => {
   const [name, setName] = React.useState("");
@@ -42,13 +42,12 @@ const Form = props => {
         Take the first step and complete this short form
       </p>
 
-      
       <S.FormEmail onSubmit={handleSubmit}>
         <label>
           name
           <S.Input
-            name='ReceiverName'
-            type='text'
+            name="ReceiverName"
+            type="text"
             value={name}
             onChange={e => setName(e.target.value)}
           />
@@ -57,8 +56,8 @@ const Form = props => {
         <label>
           email
           <S.Input
-            name='ReceiverEmail'
-            type='text'
+            name="ReceiverEmail"
+            type="text"
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
@@ -67,8 +66,8 @@ const Form = props => {
         <label>
           What do you want to change?
           <S.Input
-            name='whatChange'
-            type='text'
+            name="whatChange"
+            type="text"
             value={question1}
             onChange={e => Setquestion1(e.target.value)}
           />
@@ -77,8 +76,8 @@ const Form = props => {
         <label>
           Why do you want to change it?
           <S.Input
-            name='whyChange'
-            type='text'
+            name="whyChange"
+            type="text"
             value={question2}
             onChange={e => Setquestion2(e.target.value)}
           />
@@ -87,11 +86,11 @@ const Form = props => {
         <label>
           Who's behaviour do you want to change?
           <textarea
-            name='whoChange'
-            type='text'
-            placeholder='Put yourself in their shoes &#13;&#10;
+            name="whoChange"
+            type="text"
+            placeholder="Put yourself in their shoes &#13;&#10;
                          Why do people behave this way &#13;&#10;
-                         What would make them change?'
+                         What would make them change?"
             value={question3}
             onChange={e => Setquestion3(e.target.value)}
           />
@@ -100,8 +99,8 @@ const Form = props => {
         <label>
           What barriers do you foresee?
           <S.Input
-            name='whatBarriers'
-            type='text'
+            name="whatBarriers"
+            type="text"
             value={question4}
             onChange={e => Setquestion4(e.target.value)}
           />
@@ -110,14 +109,17 @@ const Form = props => {
         <label>
           How will you communicate your message?
           <S.Input
-            name='howChange'
-            type='text'
+            name="howChange"
+            type="text"
             value={question5}
             onChange={e => Setquestion5(e.target.value)}
           />
         </label>
 
-        <Button type='submit' value='Submit' > Submit</Button>
+        <Submit type="submit" value="Submit">
+          {" "}
+          Submit
+        </Submit>
         <Button link="/#signpost">Back</Button>
       </S.FormEmail>
     </S.Wrapper>

@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./ExperimentSingle.style";
 import hyphenate from "../../utils/hyphenate.js";
-import Button from "../Buttons/Button.js";
+import { Button } from "../Buttons/Button.js";
 
 const ExperimentSingle = props => {
 
@@ -14,20 +14,21 @@ const ExperimentSingle = props => {
   const selectExperiment = airtableStories => {
     if (airtableStories.data !== null) {
       
-      airtableStories.data.map(experiment => {
+     return airtableStories.data.map(experiment => {
         if (
           hyphenate(experiment["experiment-name"]).toLowerCase() ===
           airtableStories.match.params.experiment
         ) {
-          setExperimentData(experiment);
+          return setExperimentData(experiment);
         }
+
       });
     }
   };
 
   React.useEffect(() => {
     selectExperiment(props);
-  }, []);
+  }, [props]);
 
  
   return (

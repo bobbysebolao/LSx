@@ -24,10 +24,15 @@ const Button = styled.button`
     -webkit-transition: none;
     -moz-transition: none;
     transition: none;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 `;
 
+const Submit = styled(Button)`
+background: #397D9F;
+box-shadow: 0 6px #28546A;
+` 
+
 export {
-    Button
+    Button, Submit
 }
