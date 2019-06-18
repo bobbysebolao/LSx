@@ -126,4 +126,4 @@ const Form = props => {
   );
 };
 
-export { Form };
+export default Form;
