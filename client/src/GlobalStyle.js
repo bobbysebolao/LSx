@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
         background-repeat: no-repeat;
         background-attachment: scroll;
         background-position: top center;
+        scroll-behavior: smooth;
     }
 
     body {

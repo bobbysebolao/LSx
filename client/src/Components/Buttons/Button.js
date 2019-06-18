@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import * as S from './Button.style';
 
 const Button = props => {
   return (
-    <Link to='www.google.com'>
-      <button type='button' value='start learning' > {props.children} 
-      </button>
-    </Link>
+    <a href={props.link}>
+      <S.Button type='button'> {props.children} 
+      </S.Button>
+    </a>
   );
 };
 
