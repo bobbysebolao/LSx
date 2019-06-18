@@ -3,8 +3,7 @@ import * as S from "./Deepdive.style";
 import { ReactComponent as ParkDetail } from "../../content/park-foreground.svg";
 import { Button } from "../Buttons/Button.js";
 const Deepdive = ({ data }) => {
-  React.useEffect(() => {}, []);
-  console.log(data);
+ 
   return (
     <S.Main>
       <h2>Dive deeper into the data</h2>
