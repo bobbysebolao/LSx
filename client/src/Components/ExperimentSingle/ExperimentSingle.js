@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./ExperimentSingle.style";
 import hyphenate from "../../utils/hyphenate.js";
+import { Button } from "../Buttons/Button.js";
 
 const ExperimentSingle = props => {
 
@@ -13,26 +14,29 @@ const ExperimentSingle = props => {
   const selectExperiment = airtableStories => {
     if (airtableStories.data !== null) {
       
-      airtableStories.data.map(experiment => {
+     return airtableStories.data.map(experiment => {
         if (
           hyphenate(experiment["experiment-name"]).toLowerCase() ===
           airtableStories.match.params.experiment
         ) {
-          setExperimentData(experiment);
+          return setExperimentData(experiment);
         }
+
       });
     }
   };
 
   React.useEffect(() => {
     selectExperiment(props);
-  }, []);
+  }, [props]);
 
  
   return (
     <S.Wrapper>
+
       
       <h2>{experimentData ? experimentData["experiment-name"] : `Loading`}</h2>
+    
       <img
         width="100%"
         src={
@@ -44,6 +48,7 @@ const ExperimentSingle = props => {
       <p>{experimentData ? experimentData["paragraph-2"] : `Loading`}</p>
       <p>{experimentData ? experimentData["paragraph-3"] : `Loading`}</p>
       <p>{experimentData ? experimentData["paragraph-4"] : `Loading`}</p>
+      <Button link="/experiments">Back</Button>
     </S.Wrapper>
   );
 };
