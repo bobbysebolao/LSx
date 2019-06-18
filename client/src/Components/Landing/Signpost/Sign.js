@@ -70,7 +70,7 @@ const Sign = props => {
           Learn about LSx
         </text>
         <polygon
-          data-tesid='sign'
+          
           onClick={props.visibility}
           target='_top'
           className='sign-surface-selector'
