@@ -8,7 +8,8 @@ import {
   Form,
   Deepdive,
   Error404,
-  Story
+  Story,
+  Experiments
 } from "./Components";
 import { dataRequest } from "./utils/fetchData.js";
 import GlobalStyle from "./GlobalStyle";
@@ -16,7 +17,7 @@ import GlobalStyle from "./GlobalStyle";
 const urls = {
   home: "/",
   stories: "/success-stories",
-  story: "/story",
+  story: "/story/:story",
   deepdive: "/dive-deeper",
   experiments: "/experiments",
   action: "/action-plan",
@@ -29,7 +30,7 @@ function App() {
 
   React.useEffect(() => {
     dataRequest("http://localhost:3000/success-data").then(res =>
-      setSuccessStories(res)
+      setSuccessStories(Object.values(res))
     );
   }, []);
 
@@ -42,8 +43,22 @@ function App() {
           <Route exact path={urls.action} render={props => <Form />} />
           <Route
             exact
+            path={urls.experiments}
+            render={props => {
+              setBackground("school");
+              return <Experiments />;
+            }}
+          />
+          <Route
+            exact
             path={urls.story}
-            render={props => <Story data={successStories} />}
+            render={props =>
+              successStories ? (
+                <Story data={successStories} {...props} />
+              ) : (
+                <p>Loading...</p>
+              )
+            }
           />
           <Route
             exact
