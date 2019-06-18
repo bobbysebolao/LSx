@@ -16,36 +16,58 @@ const Share = props => {
           Reaching other groups fighting pollution is essential to reaching your
           objectives and bringing about change to your local community.
         </p>
-        <S.FlexWrapLeft>
-          <SharePerson1 />
-        </S.FlexWrapLeft>
-        <S.SpeechBubble>
-          "I organised a carpool to cut emissions near my children's school."
-        </S.SpeechBubble>
 
-        <S.FlexWrapRight>
-          <SharePerson2 />
-        </S.FlexWrapRight>
-        <S.SpeechBubbleRight>
-          "I held a science fair for my year five students. We shared our
-          findings with other schools."
-        </S.SpeechBubbleRight>
+        <S.SpeechBubbleContainer>
+          <div className='up'>
+            <S.FlexWrapLeft>
+              <SharePerson1 />
+            </S.FlexWrapLeft>
+            <S.SpeechBubble>
+              "I organised a <b> carpool</b> to cut emissions near my children's
+              school."
+            </S.SpeechBubble>
+          </div>
 
-        <S.FlexWrapLeft>
-          <SharePerson3 />
-        </S.FlexWrapLeft>
-        <S.SpeechBubble>
-          "After conducting my experiment, I shared my findings online and was
-          <b> retweeted</b> by my local MP."
-        </S.SpeechBubble>
+          <div className='up'>
+            <S.FlexWrapRight>
+              <SharePerson2 />
+            </S.FlexWrapRight>
+            <S.SpeechBubbleRight>
+              "I held a <b> science fair</b> for my year five students. We
+              shared our findings with other schools."
+            </S.SpeechBubbleRight>
+          </div>
 
-        <S.FlexWrapRight>
-          <SharePerson4 />
-        </S.FlexWrapRight>
-        <S.SpeechBubbleRight>
-          "My scout group made a facebook event to lay hedges for the local
-          park. Many hands made light work"
-        </S.SpeechBubbleRight>
+          <div className='up'>
+            <S.FlexWrapLeft>
+              <SharePerson3 />
+            </S.FlexWrapLeft>
+            <S.SpeechBubble>
+              "After conducting my experiment, I shared my findings online and
+              was retweeted by my local <b> MP</b>."
+            </S.SpeechBubble>
+          </div>
+
+          <div className='up'>
+            <S.FlexWrapRight>
+              <SharePerson4 />
+            </S.FlexWrapRight>
+            <S.SpeechBubbleRight>
+              "My scout group made a facebook event to <b> lay hedges</b> for
+              the local park."
+            </S.SpeechBubbleRight>
+          </div>
+
+          <div className='up'>
+            <S.FlexWrapLeft>
+              <SharePerson1 />
+            </S.FlexWrapLeft>
+            <S.SpeechBubble>
+              "I organised a carpool to cut emissions near my children's
+              school."
+            </S.SpeechBubble>
+          </div>
+        </S.SpeechBubbleContainer>
       </S.Container>
     </React.Fragment>
   );

@@ -57,6 +57,50 @@ const GlobalStyle = createGlobalStyle`
 
     }
 
+    @keyframes speechBubbleScroll {
+      0% {
+        
+      }
+      15%{
+        transform:translateY(0)
+      }
+      20% {
+        transform:translateY(-100%)
+      }
+      25% {
+        transform:translateY(-100%)
+      }
+      40% {
+        transform:translateY(-100%)
+      }
+      45% {
+        transform:translateY(-200%)
+      }
+      60% {
+        transform:translateY(-200%)
+      }
+      65% {
+        transform:translateY(-300%)
+      }
+      90% {
+        transform:translateY(-300%)
+      }
+      95% {
+        transform:translateY(-400%)
+      }
+      100% {
+        transform:translateY(-400%)
+      }
+    }
+
+    .up {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 250px;
+      animation: speechBubbleScroll 20s infinite;
+    }
+
 `;
 
 export default GlobalStyle;

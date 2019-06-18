@@ -9,10 +9,19 @@ const Container = styled.div`
   padding: 12px 12px 0 12px;
 `;
 
+const SpeechBubbleContainer = styled.div`
+  position: relative;
+  margin: 0;
+  text-align: center;
+  width: 320px;
+  height: 250px;
+  overflow: hidden;
+`;
+
 const SpeechBubble = styled.p`
   position: relative;
-  max-width: 30em;
-
+  max-width: 18.5em;
+  width: 296px;
   background-color: #fff;
   padding: 1.125em 1.5em;
   font-size: 1.25em;
@@ -37,7 +46,7 @@ const SpeechBubble = styled.p`
 const SpeechBubbleRight = styled.p`
   position: relative;
   max-width: 30em;
-
+  width: 296px;
   background-color: #fff;
   padding: 1.125em 1.5em;
   font-size: 1.25em;
@@ -62,11 +71,13 @@ const SpeechBubbleRight = styled.p`
 const FlexWrapLeft = styled.div`
   display: flex;
   justify-content: flex-start;
+  width: 296px;
 `;
 
 const FlexWrapRight = styled.div`
   display: flex;
   justify-content: flex-end;
+  width: 296px;
 `;
 
 export {
@@ -74,5 +85,6 @@ export {
   SpeechBubble,
   SpeechBubbleRight,
   FlexWrapLeft,
-  FlexWrapRight
+  FlexWrapRight,
+  SpeechBubbleContainer
 };
