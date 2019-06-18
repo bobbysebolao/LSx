@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./Form.style";
+import Button from "../Buttons/Button.js";
 
 const Form = props => {
   const [name, setName] = React.useState("");
@@ -40,6 +41,8 @@ const Form = props => {
         All action starts with a plan - and we’re here to help you make yours!
         Take the first step and complete this short form
       </p>
+
+      
       <S.FormEmail onSubmit={handleSubmit}>
         <label>
           name
@@ -114,7 +117,8 @@ const Form = props => {
           />
         </label>
 
-        <input type='submit' value='Submit' />
+        <Button type='submit' value='Submit' > Submit</Button>
+        <Button link="/#signpost">Back</Button>
       </S.FormEmail>
     </S.Wrapper>
   );
