@@ -16,8 +16,10 @@ const Landing = props => {
       <Button link="/action-plan"> Make Action Plan </Button>
       </S.ButtonContainer>
       <S.Nav id="signpost">
-        <h1>Home</h1>
-        <p> Follow the signs to learn more about different ways you can affect change in your community before you start your action plan</p>
+        <S.NavDescription>
+        <h2>Home</h2>
+        <h3> Follow the signs to learn more about different ways you can affect change in your community before you start your action plan</h3>
+        </S.NavDescription>
         <OpenModal
           toggle={show => (
               <Sign visibility={show} />

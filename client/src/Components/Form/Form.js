@@ -34,13 +34,13 @@ const Form = props => {
 
   return (
     <S.Wrapper>
-      <h1>
-        Create an Action Plan <br />& Email it to yourself
-      </h1>
-      <p>
+      <h2>
+        Create an Action Plan & Email it to yourself
+      </h2>
+      <h3>
         All action starts with a plan - and we’re here to help you make yours!
         Take the first step and complete this short form
-      </p>
+      </h3>
 
       <S.FormEmail onSubmit={handleSubmit}>
         <label>

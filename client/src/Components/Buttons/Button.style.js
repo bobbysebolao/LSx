@@ -25,14 +25,19 @@ const Button = styled.button`
     -moz-transition: none;
     transition: none;
     border-radius: 5px;
+
+    &:hover {
+        box-shadow: 0 4px #ab3c3c;
+        top: 2px;
+    }
 }
 `;
 
 const Submit = styled(Button)`
-background: #397D9F;
-box-shadow: 0 6px #28546A;
-` 
+	background: #397d9f;
+    box-shadow: 0 6px #28546a;
+    &:hover {
+        box-shadow: 0 4px #28546a;
+`;
 
-export {
-    Button, Submit
-}
+export { Button, Submit };

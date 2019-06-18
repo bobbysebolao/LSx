@@ -15,4 +15,11 @@ const ButtonContainer = styled.div`
 	flex-direction: column;
 `;
 
-export { Nav, Main, ButtonContainer };
+const NavDescription = styled.div`
+	padding: 0.75em;
+  margin: 0.75em;
+  background-color: #fef2e3;
+  opacity: 0.8;
+`;
+
+export { Nav, Main, ButtonContainer, NavDescription };
