@@ -3,6 +3,7 @@ import React from "react";
 const Sign = props => {
   return (
     <svg
+
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       width="296"
@@ -35,6 +36,7 @@ const Sign = props => {
             x="55%"
             y="50.5%"
             fill="white"
+
             style={{
               textAnchor: "start",
               fontWeight: "bold",
@@ -44,13 +46,16 @@ const Sign = props => {
             Start planning
           </text>
           <polygon
+
             className="sign-surface-selector"
             fill="none"
             points="282.789,299.237 137.449,299.237 137.449,300.358 137.449,302.61 137.449,340.864 137.449,343.118 137.449,344.237 282.789,344.237 296,321.737"
+
           />
         </a>
 
         <polygon
+
           fill="#3D7E9E"
           points="158.541,254.227 158.541,299.227 13.213,299.227 0,276.723 13.213,254.227"
         />
@@ -63,6 +68,7 @@ const Sign = props => {
           x="45%"
           y="43.5%"
           fill="white"
+
           style={{
             textAnchor: "end"
           }}
@@ -70,6 +76,7 @@ const Sign = props => {
           Learn about LSx
         </text>
         <polygon
+
           onClick={props.visibility}
           target="_top"
           className="sign-surface-selector"
@@ -119,6 +126,7 @@ const Sign = props => {
             x="45%"
             y="29.6%"
             fill="white"
+
             style={{
               textAnchor: "end"
             }}
@@ -126,6 +134,7 @@ const Sign = props => {
             Dive into the data
           </text>
           <polygon
+
             className="sign-surface-selector"
             fill="none"
             points="13.213,164.217 0,186.713 13.213,209.217 158.541,209.217 158.541,208.086 158.541,205.838 158.541,167.588 158.541,165.338 158.541,164.217"
@@ -145,6 +154,7 @@ const Sign = props => {
             x="55%"
             y="22.6%"
             fill="white"
+
             style={{
               textAnchor: "start"
             }}
@@ -152,6 +162,7 @@ const Sign = props => {
             Collect some data
           </text>
           <polygon
+
             className="sign-surface-selector"
             fill="none"
             points="282.789,119.217 137.449,119.217 137.449,120.339 137.449,122.59 137.449,160.845 137.449,163.099 137.449,164.217 282.789,164.217 296,141.718"
@@ -171,6 +182,7 @@ const Sign = props => {
             x="45%"
             y="15.8%"
             fill="white"
+
             style={{
               textAnchor: "end"
             }}
@@ -178,9 +190,11 @@ const Sign = props => {
             Success stories
           </text>
           <polygon
+
             className="sign-surface-selector"
             fill="none"
             points="13.213,74.208 0,96.705 13.213,119.208 158.541,119.208 158.541,118.078 158.541,115.829 158.541,77.579 158.541,75.329 158.541,74.208"
+
           />
         </a>
       </g>
