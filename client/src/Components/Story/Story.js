@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./Story.style";
 import hyphenate from "../../utils/hyphenate.js";
+import { Button } from "../Buttons/Button.js";
 
 const Story = props => {
   const [storyData, setStoryData] = React.useState(null);
@@ -9,7 +10,7 @@ const Story = props => {
     if (airtableStories.data !== null) {
       airtableStories.data.map(story => {
         if (
-          hyphenate(story["Title"]).toLowerCase() ===
+          hyphenate(story["title"]).toLowerCase() ===
           airtableStories.match.params.story
         ) {
           setStoryData(story);
@@ -20,7 +21,7 @@ const Story = props => {
 
   React.useEffect(() => {
     selectStory(props);
-  }, []);
+  }, [props]);
 
   if (storyData) {
     console.log(storyData);
@@ -35,7 +36,8 @@ const Story = props => {
         <S.Date>4 JUNE</S.Date>
         <S.Subtitle>Citizen science success stories</S.Subtitle>
       </S.Header>
-      <h2>{storyData ? storyData["Title"] : `Loading`}</h2>
+
+      <h2>{storyData ? storyData["title"] : `Loading`}</h2>
       <section>
         <ul>
           <li>
@@ -50,11 +52,12 @@ const Story = props => {
       <img
         width='100%'
         src={
-          storyData ? `${storyData["Image (max ONE per story)"][0]["url"]}` : ``
+          storyData ? `${storyData["image"][0]["url"]}` : ``
         }
         alt='description'
       />
       <section>{storyData ? storyData["Description"] : `Loading`}</section>
+      <Button link="/success-stories">Back</Button>
     </S.Wrapper>
   );
 };

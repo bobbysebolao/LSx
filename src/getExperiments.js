@@ -10,16 +10,20 @@ const baseKey = process.env.BASE_KEY;
 
 const base = new Airtable({ apiKey }).base(baseKey);
 
-const getSuccessStories = () => {
+const getExperiments = () => {
   return new Promise((resolve, reject) => {
-    base("Success Stories")
+    base("Experiments")
       .select()
       .eachPage(
         function page(records) {
           let result = [];
-          records.forEach((record) => {
-              result.push(record.fields);
+          records.forEach(record => {
+            result.push(record.fields);
           });
+          console.log("Before shift: ", result);
+          // result.shift();
+          // result.shift();
+          // console.log("After shift: ", result);
           resolve(result);
         },
         function done(err) {
@@ -32,4 +36,4 @@ const getSuccessStories = () => {
   });
 };
 
-module.exports = getSuccessStories;
+module.exports = getExperiments;

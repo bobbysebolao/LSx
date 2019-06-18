@@ -1,33 +1,43 @@
+
 import { createGlobalStyle } from "styled-components";
 import city from "./content/city-day-edited.svg";
 import comicStore from "./content/comic-book-store-edited.svg";
 import park from "./content/park-background.svg";
-import school from "./content/school.svg";
 import flats from "./content/flats.svg";
+import park from './content/park-background.svg';
+import school from './content/school.svg';
+
 
 const background = ({ data }) => {
-  let backStr = "";
+	let backStr = '';
 
-  if (data === "city") {
-    backStr = `url(${city})`;
-  }
+	switch (data) {
+		case 'city':
+			backStr = `url(${city})`;
+			break;
 
-  if (data === "comic") {
-    backStr = `url(${comicStore})`;
-  }
+		case 'comic':
+			backStr = `url(${comicStore})`;
+			break;
 
-  if (data === "park") {
-    backStr = `url(${park})`;
-  }
+		case 'park':
+			backStr = `url(${park})`;
+			break;
+      
+    case 'school':
+      backStr = `url(${school})`;
+      break;
+      
+    case 'flats':
+      backStr = `url(${flats})`;
+      break;
 
-  if (data === "school") {
-    backStr = `url(${school})`;
-  }
+    case 'school':
+      backStr = `url(${school})`;
+      break;
+      
+	return backStr;
 
-  if (data === "flats") {
-    backStr = `url(${flats})`;
-  }
-  return backStr;
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -41,6 +51,7 @@ const GlobalStyle = createGlobalStyle`
         background-repeat: no-repeat;
         background-attachment: scroll;
         background-position: top center;
+        scroll-behavior: smooth;
     }
 
     body {
@@ -51,10 +62,15 @@ const GlobalStyle = createGlobalStyle`
 
     h1, h2, h3, h4, h5, h6, text {
       font-family: 'Londrina Solid', cursive;
+      margin: 0;
     }
 
-    p, button {
+    h1 {
+      font-size: 6rem;
+    }
 
+    h2 {
+      font-size: 2.5rem;
     }
 
     @keyframes speechBubbleScroll {
@@ -100,6 +116,12 @@ const GlobalStyle = createGlobalStyle`
       height: 250px;
       animation: speechBubbleScroll 20s infinite;
     }
+
+    h3 {
+      font-weight: 300;
+    }
+
+
 
 `;
 
