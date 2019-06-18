@@ -30,7 +30,7 @@ function App() {
   const [background, setBackground] = React.useState("city");
   const [successStories, setSuccessStories] = React.useState(null);
   const [experimentsData, setExperimentsData] = React.useState(null);
-
+  const [deepDiveData, setDeepDiveData] = React.useState(null);
   React.useEffect(() => {
     dataRequest("http://localhost:3000/success-data").then(res =>
       setSuccessStories(Object.values(res))
@@ -40,6 +40,12 @@ function App() {
   React.useEffect(() => {
     dataRequest("http://localhost:3000/experiments-data").then(res =>
       setExperimentsData(Object.values(res))
+    );
+  }, []);
+
+  React.useEffect(() => {
+    dataRequest("http://localhost:3000/deep-dive-data").then(res =>
+      setDeepDiveData(res)
     );
   }, []);
 
@@ -93,7 +99,7 @@ function App() {
             path={urls.deepdive}
             render={props => {
               setBackground("park");
-              return <Deepdive />;
+              return <Deepdive data={deepDiveData}/>;
             }}
           />
           <Route component={Error404} />

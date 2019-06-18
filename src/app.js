@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const sendActionPlan = require("./sendActionPlan");
 const fetchSuccessData = require("./getSuccessStories");
 const fetchExperimentsData = require("./getExperiments");
+const fetchDeepDive = require("./getDeepDive");
 
 require("env2")("./.env");
 
@@ -26,6 +27,11 @@ app.get("/success-data", (req, res) => {
   });
 });
 
+app.get("/deep-dive-data", (req, res) => {
+  fetchDeepDive().then(response => {
+    res.send(response);
+  });
+});
 app.get("/experiments-data", (req, res) => {
   fetchExperimentsData().then(response => {
     res.send(response);
