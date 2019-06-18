@@ -16,8 +16,8 @@ const Stories = ({ data }) => {
       <S.Shelf>
         {data
           ? data.map((k, i) => (
-              <a href={hyphenate(`/story/${k["Title"]}`).toLowerCase()}>
-                <S.Comic key={k["Title"]} />
+              <a href={hyphenate(`/story/${k["title"]}`).toLowerCase()} key={i}>
+                <S.Comic />
               </a>
             ))
           : null}
