@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 
 const sendActionPlan = require("./sendActionPlan");
 const fetchSuccessData = require("./getSuccessStories");
+const fetchExperimentsData = require("./getExperiments");
 
 require("env2")("./.env");
 
@@ -21,6 +22,12 @@ app.get("/express_backend", (req, res) => {
 
 app.get("/success-data", (req, res) => {
   fetchSuccessData().then(response => {
+    res.send(response);
+  });
+});
+
+app.get("/experiments-data", (req, res) => {
+  fetchExperimentsData().then(response => {
     res.send(response);
   });
 });

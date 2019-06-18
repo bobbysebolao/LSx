@@ -27,12 +27,23 @@ const urls = {
 function App() {
   const [background, setBackground] = React.useState("city");
   const [successStories, setSuccessStories] = React.useState(null);
+  const [experimentsData, setExperimentsData] = React.useState(null);
 
   React.useEffect(() => {
     dataRequest("http://localhost:3000/success-data").then(res =>
       setSuccessStories(Object.values(res))
     );
   }, []);
+
+  React.useEffect(() => {
+    dataRequest("http://localhost:3000/experiments-data").then(res =>
+      setExperimentsData(Object.values(res))
+    );
+  }, []);
+
+  // if (experimentsData !== null) {
+  //   console.log("THis is the airtable experiments data", experimentsData);
+  // }
 
   return (
     <BrowserRouter>
@@ -46,7 +57,7 @@ function App() {
             path={urls.experiments}
             render={props => {
               setBackground("school");
-              return <Experiments />;
+              return <Experiments data={experimentsData} />;
             }}
           />
           <Route
