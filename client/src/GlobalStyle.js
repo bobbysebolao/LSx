@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import city from "./content/city-day-edited.svg";
 import comicStore from "./content/comic-book-store-edited.svg";
 import park from "./content/park-background.svg";
+import school from "./content/school.svg";
 
 const background = ({ data }) => {
   let backStr = "";
@@ -15,7 +16,11 @@ const background = ({ data }) => {
   }
 
   if (data === "park") {
-    backStr = `url(${park})`
+    backStr = `url(${park})`;
+  }
+
+  if (data === "school") {
+    backStr = `url(${school})`;
   }
   return backStr;
 };

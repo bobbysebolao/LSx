@@ -4,6 +4,6 @@ import { Form } from "./Form/Form.js";
 import Deepdive from "./Deepdive/Deepdive.js";
 import Error404 from "./Error404/Error404";
 import Story from "./Story/Story.js";
+import Experiments from "./Experiments/Experiments.js";
 
-export { Landing, Stories, Form, Deepdive, Error404, Story };
-
+export { Landing, Stories, Form, Deepdive, Error404, Story, Experiments };
