@@ -3,6 +3,7 @@ import city from "./content/city-day-edited.svg";
 import comicStore from "./content/comic-book-store-edited.svg";
 import park from "./content/park-background.svg";
 import school from "./content/school.svg";
+import flats from "./content/flats.svg";
 
 const background = ({ data }) => {
   let backStr = "";
@@ -21,6 +22,10 @@ const background = ({ data }) => {
 
   if (data === "school") {
     backStr = `url(${school})`;
+  }
+
+  if (data === "flats") {
+    backStr = `url(${flats})`;
   }
   return backStr;
 };

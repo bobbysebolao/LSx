@@ -5,5 +5,15 @@ import Deepdive from "./Deepdive/Deepdive.js";
 import Error404 from "./Error404/Error404";
 import Story from "./Story/Story.js";
 import Experiments from "./Experiments/Experiments.js";
+import Share from "./Share/Share.js";
 
-export { Landing, Stories, Form, Deepdive, Error404, Story, Experiments };
+export {
+  Landing,
+  Stories,
+  Form,
+  Deepdive,
+  Error404,
+  Story,
+  Experiments,
+  Share
+};

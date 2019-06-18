@@ -48,11 +48,11 @@ const Story = props => {
         </ul>
       </section>
       <img
-        width="100%"
+        width='100%'
         src={
           storyData ? `${storyData["Image (max ONE per story)"][0]["url"]}` : ``
         }
-        alt="description"
+        alt='description'
       />
       <section>{storyData ? storyData["Description"] : `Loading`}</section>
     </S.Wrapper>

@@ -9,7 +9,8 @@ import {
   Deepdive,
   Error404,
   Story,
-  Experiments
+  Experiments,
+  Share
 } from "./Components";
 import { dataRequest } from "./utils/fetchData.js";
 import GlobalStyle from "./GlobalStyle";
@@ -37,7 +38,7 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyle data={background} />
-      <div className="App">
+      <div className='App'>
         <Switch>
           <Route exact path={urls.home} render={props => <Landing />} />
           <Route exact path={urls.action} render={props => <Form />} />
@@ -74,6 +75,14 @@ function App() {
             render={props => {
               setBackground("park");
               return <Deepdive />;
+            }}
+          />
+          <Route
+            exact
+            path={urls.share}
+            render={props => {
+              setBackground("flats");
+              return <Share />;
             }}
           />
           <Route component={Error404} />
