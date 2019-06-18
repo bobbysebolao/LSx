@@ -1,10 +1,8 @@
-import styled from "styled-components"; 
+import styled from "styled-components";
 
-const Experiments = styled.main`
+const Main = styled.main`
+  border: 2px solid black;
+  margin-top: 2000px;
+`;
 
-border: 2px solid black;
-margin-top: 2000px;
-
-`
-
-export { Experiments }
+export { Main };
