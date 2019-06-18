@@ -10,6 +10,6 @@ const Header = styled.header``;
 
 const Board = styled.div``;
 
-const Experiment = styled.p``;
+const Experiment = styled.h2``;
 
 export { Main, Header, Board, Experiment };

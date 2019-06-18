@@ -20,7 +20,6 @@ const getSuccessStories = () => {
           records.forEach((record) => {
               result.push(record.fields);
           });
-          result.shift();
           resolve(result);
         },
         function done(err) {

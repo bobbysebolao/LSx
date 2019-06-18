@@ -9,7 +9,8 @@ import {
   Deepdive,
   Error404,
   Story,
-  Experiments
+  Experiments,
+  ExperimentSingle
 } from "./Components";
 import { dataRequest } from "./utils/fetchData.js";
 import GlobalStyle from "./GlobalStyle";
@@ -20,6 +21,7 @@ const urls = {
   story: "/story/:story",
   deepdive: "/dive-deeper",
   experiments: "/experiments",
+  experiment: "/experiment/:experiment",
   action: "/action-plan",
   share: "/share"
 };
@@ -41,10 +43,6 @@ function App() {
     );
   }, []);
 
-  // if (experimentsData !== null) {
-  //   console.log("THis is the airtable experiments data", experimentsData);
-  // }
-
   return (
     <BrowserRouter>
       <GlobalStyle data={background} />
@@ -59,6 +57,17 @@ function App() {
               setBackground("school");
               return <Experiments data={experimentsData} />;
             }}
+          />
+          <Route
+            exact
+            path={urls.experiment}
+            render={props =>
+              experimentsData ? (
+                <ExperimentSingle data={experimentsData} {...props} />
+              ) : (
+                <p>Loading...</p>
+              )
+            }
           />
           <Route
             exact

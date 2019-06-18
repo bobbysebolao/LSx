@@ -19,7 +19,9 @@ const Experiments = ({ data }) => {
       <S.Board>
         {data
           ? data.map((k, i) => (
+            <a href={hyphenate(`/experiment/${k["experiment-name"]}`).toLowerCase()}key={i}>
               <S.Experiment>{k["experiment-name"]}</S.Experiment>
+              </a>
             ))
           : null}
       </S.Board>
