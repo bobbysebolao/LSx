@@ -1,28 +1,30 @@
-import { createGlobalStyle } from "styled-components";
-import city from "./content/city-day-edited.svg";
-import comicStore from "./content/comic-book-store-edited.svg";
-import park from "./content/park-background.svg";
-import school from "./content/school.svg";
+import { createGlobalStyle } from 'styled-components';
+import city from './content/city-day-edited.svg';
+import comicStore from './content/comic-book-store-edited.svg';
+import park from './content/park-background.svg';
+import school from './content/school.svg';
 
 const background = ({ data }) => {
-  let backStr = "";
+	let backStr = '';
 
-  if (data === "city") {
-    backStr = `url(${city})`;
-  }
+	switch (data) {
+		case 'city':
+			backStr = `url(${city})`;
+			break;
 
-  if (data === "comic") {
-    backStr = `url(${comicStore})`;
-  }
+		case 'comic':
+			backStr = `url(${comicStore})`;
+			break;
 
-  if (data === "park") {
-    backStr = `url(${park})`;
-  }
+		case 'park':
+			backStr = `url(${park})`;
+			break;
 
-  if (data === "school") {
-    backStr = `url(${school})`;
-  }
-  return backStr;
+		case 'school':
+			backStr = `url(${school})`;
+	}
+
+	return backStr;
 };
 
 const GlobalStyle = createGlobalStyle`
