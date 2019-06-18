@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "./Form.style"
+import * as S from "./Form.style";
 
 const Form = props => {
   const [name, setName] = React.useState("");
@@ -36,51 +36,51 @@ const Form = props => {
       <h1>
         Create an Action Plan <br />& Email it to yourself
       </h1>
-
-      <p>All action starts with a plan - and we’re here to help you make yours!
-
-Take the first step and complete this short form</p>
-      <form onSubmit={handleSubmit}>
+      <p>
+        All action starts with a plan - and we’re here to help you make yours!
+        Take the first step and complete this short form
+      </p>
+      <S.FormEmail onSubmit={handleSubmit}>
         <label>
           name
-          <input
+          <S.Input
             name='ReceiverName'
             type='text'
             value={name}
             onChange={e => setName(e.target.value)}
           />
         </label>
-        <br />
+
         <label>
           email
-          <input
+          <S.Input
             name='ReceiverEmail'
             type='text'
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
         </label>
-        <br />
+
         <label>
           What do you want to change?
-          <input
+          <S.Input
             name='whatChange'
             type='text'
             value={question1}
             onChange={e => Setquestion1(e.target.value)}
           />
         </label>
-        <br />
+
         <label>
           Why do you want to change it?
-          <input
+          <S.Input
             name='whyChange'
             type='text'
             value={question2}
             onChange={e => Setquestion2(e.target.value)}
           />
         </label>
-        <br />
+
         <label>
           Who's behaviour do you want to change?
           <textarea
@@ -93,20 +93,20 @@ Take the first step and complete this short form</p>
             onChange={e => Setquestion3(e.target.value)}
           />
         </label>
-        <br />
+
         <label>
           What barriers do you foresee?
-          <input
+          <S.Input
             name='whatBarriers'
             type='text'
             value={question4}
             onChange={e => Setquestion4(e.target.value)}
           />
         </label>
-        <br />
+
         <label>
           How will you communicate your message?
-          <input
+          <S.Input
             name='howChange'
             type='text'
             value={question5}
@@ -115,7 +115,7 @@ Take the first step and complete this short form</p>
         </label>
 
         <input type='submit' value='Submit' />
-      </form>
+      </S.FormEmail>
     </S.Wrapper>
   );
 };
