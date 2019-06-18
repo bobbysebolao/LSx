@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./Form.style";
+import Swal from 'sweetalert2';
 
 const Form = props => {
   const [name, setName] = React.useState("");
