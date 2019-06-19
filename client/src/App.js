@@ -32,19 +32,19 @@ function App() {
   const [experimentsData, setExperimentsData] = React.useState(null);
   const [deepDiveData, setDeepDiveData] = React.useState(null);
   React.useEffect(() => {
-    dataRequest("http://localhost:3000/success-data").then(res =>
+    dataRequest("/success-data").then(res =>
       setSuccessStories(Object.values(res))
     );
   }, []);
 
   React.useEffect(() => {
-    dataRequest("http://localhost:3000/experiments-data").then(res =>
+    dataRequest("/experiments-data").then(res =>
       setExperimentsData(Object.values(res))
     );
   }, []);
 
   React.useEffect(() => {
-    dataRequest("http://localhost:3000/deep-dive-data").then(res =>
+    dataRequest("/deep-dive-data").then(res =>
       setDeepDiveData(res)
     );
   }, []);

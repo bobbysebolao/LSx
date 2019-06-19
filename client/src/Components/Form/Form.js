@@ -15,7 +15,7 @@ const Form = (props) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log('we are in handlesubmit', name, email);
-		fetch('http://localhost:3000/send', {
+		fetch('/send', {
 			method: 'post',
 			body: JSON.stringify({
 				name: `${name}`,
