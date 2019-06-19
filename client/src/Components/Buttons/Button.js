@@ -1,13 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import * as S from './Button.style';
 
 const Button = props => {
   return (
-    <Link to='www.google.com'>
-      <button type='button' value='start learning' > {props.children} 
-      </button>
-    </Link>
+    <a href={props.link}>
+      <S.Button type={props.type ? props.type : "button"}> {props.children} 
+      </S.Button>
+    </a>
   );
 };
 
-export default Button;
+const Submit = props => {
+  return (
+    <a href={props.link}>
+      <S.Submit type={props.type ? props.type : "button"}> {props.children} 
+      </S.Submit>
+    </a>
+  );
+};
+
+export { Button, Submit } ;

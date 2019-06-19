@@ -1,8 +1,15 @@
 import styled from "styled-components";
 
 const Main = styled.main`
+  height: 100px;
   border: 2px solid black;
-  margin-top: 2000px;
+  margin-top: 0px;
 `;
 
-export { Main };
+const Header = styled.header``;
+
+const Board = styled.div``;
+
+const Experiment = styled.h2``;
+
+export { Main, Header, Board, Experiment };

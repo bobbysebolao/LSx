@@ -12,7 +12,7 @@ const OldLady = styled.div`
   position: absolute;
   left: 47%;
   right: 20%;
-  bottom: 60%;
+  bottom: 40%;
   width: 132.42px;
   height: 191.724px;
   background: url(${img}) left center;
