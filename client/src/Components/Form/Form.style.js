@@ -12,8 +12,15 @@ const Wrapper = styled.div`
 `;
 
 const Input = styled.input`
+  margin: 5px;
   font-size: 1em;
   padding: 0.5em;
+  border-radius: 5px;
+`;
+
+const Label = styled.label`
+  padding: 5px;
+  padding-bottom: 0.7em;
 `;
 
 const FormEmail = styled.form`
@@ -24,4 +31,21 @@ const FormEmail = styled.form`
   height: 100%;
 `;
 
-export { Wrapper, Input, FormEmail };
+const FormDetails = styled.h3`
+margin-top: 10px;
+`;
+const Textarea = styled.textarea`
+  margin: 5px;
+  width: 222px;
+  height: 100px;
+  resize: none;
+  font-family: "Lato";
+  padding: 0.5em;
+  border-width: 2px;
+  border-style: inset;
+  border-radius: 5px;
+  border-color: initial;
+  border-image: initial;
+`;
+
+export { Wrapper, Input, FormEmail, Textarea, Label, FormDetails };
