@@ -20,10 +20,7 @@ const getExperiments = () => {
           records.forEach(record => {
             result.push(record.fields);
           });
-          console.log("Before shift: ", result);
-          // result.shift();
-          // result.shift();
-          // console.log("After shift: ", result);
+          
           resolve(result);
         },
         function done(err) {
