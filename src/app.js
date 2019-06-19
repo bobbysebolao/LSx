@@ -1,6 +1,8 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
+const compresion = require("compression");
+const helmet = require("helmet");
 
 const sendActionPlan = require("./sendActionPlan");
 const fetchSuccessData = require("./getSuccessStories");
@@ -11,11 +13,16 @@ require("env2")("./.env");
 
 const app = express();
 
-app.disable("x-powered -by");
+const middleware = [
+  helmet(),
+  compresion(),
+  bodyParser.urlencoded({ extended: false }),
+  bodyParser.json(),
+  express.static(path.join(__dirname, "..", "client", "build"))
+];
+app.use(middleware);
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "..", "client", "build")));
+app.disable("x-powered -by");
 
 app.get("/express_backend", (req, res) => {
   res.send({ express: " YOUR BACKEND IS CONNECTED TO REACT" });
