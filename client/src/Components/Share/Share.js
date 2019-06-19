@@ -6,17 +6,22 @@ import {
   SharePerson3,
   SharePerson4
 } from "./SharePeople/SharePeople";
+import {
+  BalloonFb,
+  BalloonEmail,
+  BalloonGov,
+  BalloonTwitter
+} from "./Balloons/Balloons";
 
 const Share = props => {
   return (
     <React.Fragment>
       <S.Container>
         <h1>Your community needs you</h1>
-        <p>
+        <p class='social'>
           Reaching other groups fighting pollution is essential to reaching your
           objectives and bringing about change to your local community.
         </p>
-
         <S.SpeechBubbleContainer>
           <div className='up'>
             <S.FlexWrapLeft>
@@ -68,6 +73,13 @@ const Share = props => {
             </S.SpeechBubble>
           </div>
         </S.SpeechBubbleContainer>
+        <BalloonFb />
+        <BalloonEmail />
+        <h3 class='socials'>
+          Share your story via Facebook, email, Twitter, Petitions.gov
+        </h3>
+        <BalloonTwitter />
+        <BalloonGov />
       </S.Container>
     </React.Fragment>
   );

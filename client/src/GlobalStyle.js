@@ -101,6 +101,40 @@ const GlobalStyle = createGlobalStyle`
       animation: speechBubbleScroll 20s infinite;
     }
 
+
+    .socials {
+      position: relative;
+
+      border-radius: 20px;
+      padding: 24px 12px 24px 12px;
+
+      font-family: "Lato", sans-serif;
+      background-color:rgba(254,203,139,1); 
+
+    }
+
+    .socials:before {
+      position: absolute;
+      top: -17px;
+      left: 30px;
+      content: "#AirQuality";
+   
+      border-radius: 20px;
+      padding: 5px;
+      font-family: "Lato", sans-serif;
+      background-color:rgba(254,203,139,1); 
+    }
+
+    .social {
+      position: relative;
+
+      border-radius: 20px;
+      padding: 24px;
+
+      font-family: "Lato", sans-serif;
+      background-color:rgba(254,203,139,1); 
+
+    }
 `;
 
 export default GlobalStyle;
