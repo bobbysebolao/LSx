@@ -12,12 +12,13 @@ import {
   BalloonGov,
   BalloonTwitter
 } from "./Balloons/Balloons";
+import { Button } from "../Buttons/Button.js";
 
 const Share = props => {
   return (
     <React.Fragment>
       <S.Container>
-        <h1>Your community needs you</h1>
+        <h2>Your community needs you</h2>
         <p class='social'>
           Reaching other groups fighting pollution is essential to reaching your
           objectives and bringing about change to your local community.
@@ -48,8 +49,8 @@ const Share = props => {
               <SharePerson3 />
             </S.FlexWrapLeft>
             <S.SpeechBubble>
-              "After conducting my experiment, I shared my findings online and
-              was retweeted by my local <b> MP</b>."
+              "I shared my results on my <b> twitter</b> and opened a dialogue
+              with my <b> local MP</b>."
             </S.SpeechBubble>
           </div>
 
@@ -58,7 +59,7 @@ const Share = props => {
               <SharePerson4 />
             </S.FlexWrapRight>
             <S.SpeechBubbleRight>
-              "My scout group made a facebook event to <b> lay hedges</b> for
+              "My scout group made a <b> facebook event</b> to lay hedges for
               the local park."
             </S.SpeechBubbleRight>
           </div>
@@ -68,7 +69,7 @@ const Share = props => {
               <SharePerson1 />
             </S.FlexWrapLeft>
             <S.SpeechBubble>
-              "I organised a carpool to cut emissions near my children's
+              "I organised a <b> carpool</b> to cut emissions near my children's
               school."
             </S.SpeechBubble>
           </div>
@@ -80,6 +81,7 @@ const Share = props => {
         </p>
         <BalloonTwitter />
         <BalloonGov />
+        <Button link='/#signpost'>Back</Button>
       </S.Container>
     </React.Fragment>
   );
