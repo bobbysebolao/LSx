@@ -26,18 +26,15 @@ const Landing = props => {
           )}
           content={hide => (
             <Modal>
-              <button onClick={hide}>X</button>
+              <S.Button onClick={hide}>X</S.Button>
               <h2>
-                About <a href="http://www.lsx.org.uk/">LSx</a>
+                About LSx
               </h2>
               <p>
-                London Sustainability Exchange is a “think and do” charity
-                <br />
+              <S.Link href="http://www.lsx.org.uk/">London Sustainability Exchange</S.Link> is a “think and do” charity
                 which creates collaborations that address the complex barriers
-                to
-                <br />a sustainable London.
+                to a sustainable London.
               </p>
-              <br />
             </Modal>
           )}
         />

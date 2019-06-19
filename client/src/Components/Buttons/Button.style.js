@@ -15,15 +15,9 @@ const Button = styled.button`
 	font-weight: 700;
 	outline: none;
 	position: relative;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-    transition: all 0.3s;
     background: #cb4e4e;
     color: #fff;
     box-shadow: 0 6px #ab3c3c;
-    -webkit-transition: none;
-    -moz-transition: none;
-    transition: none;
     border-radius: 5px;
 
     &:hover {
