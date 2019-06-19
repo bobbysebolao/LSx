@@ -1,4 +1,3 @@
-
 import { createGlobalStyle } from "styled-components";
 import city from "./content/city-day-edited.svg";
 import comicStore from "./content/comic-book-store-edited.svg";
@@ -7,25 +6,23 @@ import school from "./content/school.svg";
 import flats from "./content/flats.svg";
 import postbox from "./content/postbox.svg"
 
-
 const background = ({ data }) => {
-	let backStr = '';
+  let backStr = "";
 
-	switch (data) {
-		case 'city':
-			backStr = `url(${city})`;
-			break;
+  switch (data) {
+    case "city":
+      backStr = `url(${city})`;
+      break;
 
-		case 'comic':
-			backStr = `url(${comicStore})`;
-			break;
+    case "comic":
+      backStr = `url(${comicStore})`;
+      break;
 
-		case 'park':
-			backStr = `url(${park})`;
-			break;
+    case "park":
+      backStr = `url(${park})`;
+      break;
 
-
-    case 'flats':
+    case "flats":
       backStr = `url(${flats})`;
       break;
 
@@ -33,14 +30,15 @@ const background = ({ data }) => {
 			backStr = `url(${school})`;
       break;
       
-      case 'postbox':
-        backStr = `url(${postbox})`;
-        break;
+    case 'postbox':
+      backStr = `url(${postbox})`;
+      break;
 
-		default:
-			backStr = '';
-	}
-	return backStr;
+
+    default:
+      backStr = "";
+  }
+  return backStr;
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -75,11 +73,14 @@ const GlobalStyle = createGlobalStyle`
 
     h2 {
       font-size: 2.5rem;
+			margin-bottom: 0.5em;
     }
 
     h3 {
       font-weight: 300;
+			margin-bottom: 0.5em;
     }
+
 `;
 
 export default GlobalStyle;
