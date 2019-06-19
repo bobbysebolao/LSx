@@ -75,9 +75,9 @@ const Share = props => {
         </S.SpeechBubbleContainer>
         <BalloonFb />
         <BalloonEmail />
-        <h3 class='socials'>
+        <p class='socials'>
           Share your story via Facebook, email, Twitter, Petitions.gov
-        </h3>
+        </p>
         <BalloonTwitter />
         <BalloonGov />
       </S.Container>

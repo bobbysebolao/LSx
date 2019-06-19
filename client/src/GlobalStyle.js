@@ -104,10 +104,9 @@ const GlobalStyle = createGlobalStyle`
 
     .socials {
       position: relative;
-
       border-radius: 20px;
       padding: 24px 12px 24px 12px;
-
+      margin-top: 30px;
       font-family: "Lato", sans-serif;
       background-color:rgba(254,203,139,1); 
 
@@ -118,10 +117,10 @@ const GlobalStyle = createGlobalStyle`
       top: -17px;
       left: 30px;
       content: "#AirQuality";
-   
       border-radius: 20px;
+      font-size: 1.4em;
+      font-family: 'Londrina Solid', cursive;
       padding: 5px;
-      font-family: "Lato", sans-serif;
       background-color:rgba(254,203,139,1); 
     }
 
