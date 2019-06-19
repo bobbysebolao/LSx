@@ -25,9 +25,6 @@ const Deepdive = ({ data }) => {
         <p>{data ? data[0]["middle"] : `Loading`}</p>
         <p>{data ? data[0]["end"] : `Loading`}</p>
         <Button link="/#signpost">Back</Button>
-
-        <h1>Scroll pos: {scrollPosition}</h1>
-        <h1>Opacity: {foregroundOpacity}</h1>
       </S.Container>
       <S.ForegroundContainer style={{ opacity: foregroundOpacity }} />
     </S.Main>
