@@ -1,8 +1,22 @@
 import React from "react";
 import * as S from "./Deepdive.style";
-import { ReactComponent as ParkDetail } from "../../content/park-foreground.svg";
 import { Button } from "../Buttons/Button.js";
 const Deepdive = ({ data }) => {
+  const [scrollPosition, setScrollPosition] = React.useState(null);
+  const [foregroundOpacity, setForegroundOpacity] = React.useState(1);
+
+  window.onscroll = () => {
+    setScrollPosition(window.scrollY);
+    console.log("The scroll position: ", scrollPosition);
+  };
+
+  React.useEffect(
+    () => {
+      setForegroundOpacity(1 / (scrollPosition / 100));
+    },
+    [scrollPosition]
+  );
+
   return (
     <S.Main>
       <h2>Dive deeper into the data</h2>
@@ -11,8 +25,11 @@ const Deepdive = ({ data }) => {
         <p>{data ? data[0]["middle"] : `Loading`}</p>
         <p>{data ? data[0]["end"] : `Loading`}</p>
         <Button link="/#signpost">Back</Button>
+
+        <h1>Scroll pos: {scrollPosition}</h1>
+        <h1>Opacity: {foregroundOpacity}</h1>
       </S.Container>
-      <S.ForegroundContainer />
+      <S.ForegroundContainer style={{ opacity: foregroundOpacity }} />
     </S.Main>
   );
 };
