@@ -11,7 +11,7 @@ const BalloonFb = props => {
     >
       <a
         href='https://www.facebook.com/LondonSustainabilityExchange/'
-        rel='noreferrer'
+        rel="noopener noreferrer"
         target='_blank'
       >
         <path
@@ -67,7 +67,7 @@ const BalloonGov = props => {
     >
       <a
         href='https://petition.parliament.uk/'
-        rel='noreferrer'
+        rel="noopener noreferrer"
         target='_blank'
       >
         <path
@@ -191,7 +191,7 @@ const BalloonTwitter = props => {
         data-related='LSx_News'
         data-lang='en'
         data-show-count='false'
-        rel='noreferrer'
+        rel="noopener noreferrer"
         target='_blank'
       >
         <path

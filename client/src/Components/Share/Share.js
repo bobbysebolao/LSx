@@ -18,13 +18,15 @@ const Share = props => {
   return (
     <React.Fragment>
       <S.Container>
+        <S.Header>
         <h2>Your community needs you</h2>
-        <p class='social'>
+        <h3>
           Reaching other groups fighting pollution is essential to reaching your
           objectives and bringing about change to your local community.
-        </p>
+        </h3>
+        </S.Header>
         <S.SpeechBubbleContainer>
-          <div className='up'>
+          <S.ChatBoundary>
             <S.FlexWrapLeft>
               <SharePerson1 />
             </S.FlexWrapLeft>
@@ -32,9 +34,9 @@ const Share = props => {
               "I organised a <b> carpool</b> to cut emissions near my children's
               school."
             </S.SpeechBubble>
-          </div>
+          </S.ChatBoundary>
 
-          <div className='up'>
+          <S.ChatBoundary>
             <S.FlexWrapRight>
               <SharePerson2 />
             </S.FlexWrapRight>
@@ -42,29 +44,29 @@ const Share = props => {
               "I held a <b> science fair</b> for my year five students. We
               shared our findings with other schools."
             </S.SpeechBubbleRight>
-          </div>
+          </S.ChatBoundary>
 
-          <div className='up'>
+          <S.ChatBoundary>
             <S.FlexWrapLeft>
               <SharePerson3 />
             </S.FlexWrapLeft>
             <S.SpeechBubble>
-              "I shared my results on my <b> twitter</b> and opened a dialogue
+              "I shared my results on my <b> Twitter</b> and opened a dialogue
               with my <b> local MP</b>."
             </S.SpeechBubble>
-          </div>
+          </S.ChatBoundary>
 
-          <div className='up'>
+          <S.ChatBoundary>
             <S.FlexWrapRight>
               <SharePerson4 />
             </S.FlexWrapRight>
             <S.SpeechBubbleRight>
-              "My scout group made a <b> facebook event</b> to lay hedges for
+              "My scout group made a <b> Facebook event</b> to lay hedges for
               the local park."
             </S.SpeechBubbleRight>
-          </div>
+          </S.ChatBoundary>
 
-          <div className='up'>
+          <S.ChatBoundary>
             <S.FlexWrapLeft>
               <SharePerson1 />
             </S.FlexWrapLeft>
@@ -72,13 +74,13 @@ const Share = props => {
               "I organised a <b> carpool</b> to cut emissions near my children's
               school."
             </S.SpeechBubble>
-          </div>
+          </S.ChatBoundary>
         </S.SpeechBubbleContainer>
         <BalloonFb />
         <BalloonEmail />
-        <p class='socials'>
+        <S.SocialsPrompt>
           Share your story via Facebook, email, Twitter, Petitions.gov
-        </p>
+        </S.SocialsPrompt>
         <BalloonTwitter />
         <BalloonGov />
         <Button link='/#signpost'>Back</Button>

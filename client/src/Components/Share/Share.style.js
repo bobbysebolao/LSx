@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Container = styled.div`
   position: relative;
@@ -7,6 +7,14 @@ const Container = styled.div`
   width: 320px;
   background-color: rgba(254, 203, 139, 0.5);
   padding: 12px 12px 0 12px;
+`;
+
+const Header = styled.header`
+  padding: 0.5em;
+  margin: 0.75em;
+  background-color: #fef2e3;
+  opacity: 0.8;
+  border-radius: 5px;
 `;
 
 const SpeechBubbleContainer = styled.div`
@@ -80,11 +88,80 @@ const FlexWrapRight = styled.div`
   width: 296px;
 `;
 
+const SocialsPrompt = styled.p`
+  position: relative;
+  border-radius: 20px;
+  padding: 24px 12px 24px 12px;
+  margin-top: 30px;
+  font-family: "Lato", sans-serif;
+  background-color:rgba(254,203,139,1); 
+
+&:before {
+  position: absolute;
+  top: -17px;
+  left: 30px;
+  content: "#AirQuality";
+  border-radius: 20px;
+  font-size: 1.4em;
+  font-family: 'Londrina Solid', cursive;
+  padding: 5px;
+  background-color:rgba(254,203,139,1); 
+}
+`
+
+const speechBubbleScroll = keyframes`
+  0% {
+    
+  }
+  15%{
+    transform:translateY(0)
+  }
+  20% {
+    transform:translateY(-100%)
+  }
+  25% {
+    transform:translateY(-100%)
+  }
+  40% {
+    transform:translateY(-100%)
+  }
+  45% {
+    transform:translateY(-200%)
+  }
+  60% {
+    transform:translateY(-200%)
+  }
+  65% {
+    transform:translateY(-300%)
+  }
+  90% {
+    transform:translateY(-300%)
+  }
+  95% {
+    transform:translateY(-400%)
+  }
+  100% {
+    transform:translateY(-400%)
+  }
+`
+
+const ChatBoundary = styled.div`
+display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 250px;
+  animation: ${speechBubbleScroll} 20s infinite;
+`
+
+
 export {
   Container,
+  Header,
   SpeechBubble,
   SpeechBubbleRight,
   FlexWrapLeft,
   FlexWrapRight,
-  SpeechBubbleContainer
+  SpeechBubbleContainer,
+  ChatBoundary,
+  SocialsPrompt
 };
