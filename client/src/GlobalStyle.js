@@ -1,8 +1,11 @@
-import { createGlobalStyle } from 'styled-components';
-import city from './content/city-day-edited.svg';
-import comicStore from './content/comic-book-store-edited.svg';
-import park from './content/park-background.svg';
-import school from './content/school.svg';
+
+import { createGlobalStyle } from "styled-components";
+import city from "./content/city-day-edited.svg";
+import comicStore from "./content/comic-book-store-edited.svg";
+import park from "./content/park-background.svg";
+import school from "./content/school.svg";
+import flats from "./content/flats.svg";
+
 
 const background = ({ data }) => {
 	let backStr = '';
@@ -20,6 +23,11 @@ const background = ({ data }) => {
 			backStr = `url(${park})`;
 			break;
 
+
+    case 'flats':
+      backStr = `url(${flats})`;
+      break;
+
 		case 'school':
 			backStr = `url(${school})`;
 			break;
@@ -27,7 +35,6 @@ const background = ({ data }) => {
 		default:
 			backStr = '';
 	}
-
 	return backStr;
 };
 
@@ -70,6 +77,83 @@ const GlobalStyle = createGlobalStyle`
     }
 
 
+    @keyframes speechBubbleScroll {
+      0% {
+        
+      }
+      15%{
+        transform:translateY(0)
+      }
+      20% {
+        transform:translateY(-100%)
+      }
+      25% {
+        transform:translateY(-100%)
+      }
+      40% {
+        transform:translateY(-100%)
+      }
+      45% {
+        transform:translateY(-200%)
+      }
+      60% {
+        transform:translateY(-200%)
+      }
+      65% {
+        transform:translateY(-300%)
+      }
+      90% {
+        transform:translateY(-300%)
+      }
+      95% {
+        transform:translateY(-400%)
+      }
+      100% {
+        transform:translateY(-400%)
+      }
+    }
+
+    .up {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 250px;
+      animation: speechBubbleScroll 20s infinite;
+    }
+
+
+    .socials {
+      position: relative;
+      border-radius: 20px;
+      padding: 24px 12px 24px 12px;
+      margin-top: 30px;
+      font-family: "Lato", sans-serif;
+      background-color:rgba(254,203,139,1); 
+
+    }
+
+    .socials:before {
+      position: absolute;
+      top: -17px;
+      left: 30px;
+      content: "#AirQuality";
+      border-radius: 20px;
+      font-size: 1.4em;
+      font-family: 'Londrina Solid', cursive;
+      padding: 5px;
+      background-color:rgba(254,203,139,1); 
+    }
+
+    .social {
+      position: relative;
+
+      border-radius: 20px;
+      padding: 24px;
+
+      font-family: "Lato", sans-serif;
+      background-color:rgba(254,203,139,1); 
+
+    }
 `;
 
 export default GlobalStyle;
