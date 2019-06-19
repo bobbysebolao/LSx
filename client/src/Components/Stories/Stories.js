@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./Stories.style";
 import hyphenate from "../../utils/hyphenate.js";
+import { Button } from "../Buttons/Button.js";
 
 const Stories = ({ data }) => {
   return (
@@ -16,12 +17,13 @@ const Stories = ({ data }) => {
       <S.Shelf>
         {data
           ? data.map((k, i) => (
-              <a href={hyphenate(`/story/${k["Title"]}`).toLowerCase()}>
-                <S.Comic key={k["Title"]} />
+              <a href={hyphenate(`/story/${k["title"]}`).toLowerCase()} key={i}>
+                <S.Comic />
               </a>
             ))
           : null}
       </S.Shelf>
+      <Button link="/#signpost">Back</Button>
     </S.Main>
   );
 };

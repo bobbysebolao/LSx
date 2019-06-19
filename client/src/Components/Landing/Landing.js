@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Buttons/Button.js";
+import { Button, Submit } from "../Buttons/Button.js";
 import Clouds from "./Clouds/Clouds";
 import { Modal, OpenModal } from "../Modal/Modal";
 import Sign from "./Signpost/Sign";
@@ -11,9 +11,15 @@ const Landing = props => {
       <Clouds />
       <h1>LSx</h1>
       <h2>Action Planner</h2>
-      <Button> Start Learning </Button>
-      <Button> Make Action Plan </Button>
-      <S.Nav>
+      <S.ButtonContainer>
+      <Submit link="#signpost"> Start Learning </Submit>
+      <Button link="/action-plan"> Make Action Plan </Button>
+      </S.ButtonContainer>
+      <S.Nav id="signpost">
+        <S.NavDescription>
+        <h2>Home</h2>
+        <h3> Follow the signs to learn more about different ways you can affect change in your community before you start your action plan</h3>
+        </S.NavDescription>
         <OpenModal
           toggle={show => (
               <Sign visibility={show} />

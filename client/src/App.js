@@ -1,7 +1,5 @@
 import React from "react";
-import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
 import {
   Landing,
   Stories,
@@ -10,7 +8,8 @@ import {
   Error404,
   Story,
   Experiments,
-  Share
+  Share,
+  ExperimentSingle
 } from "./Components";
 import { dataRequest } from "./utils/fetchData.js";
 import GlobalStyle from "./GlobalStyle";
@@ -21,6 +20,7 @@ const urls = {
   story: "/story/:story",
   deepdive: "/dive-deeper",
   experiments: "/experiments",
+  experiment: "/experiment/:experiment",
   action: "/action-plan",
   share: "/share"
 };
@@ -28,10 +28,23 @@ const urls = {
 function App() {
   const [background, setBackground] = React.useState("city");
   const [successStories, setSuccessStories] = React.useState(null);
+  const [experimentsData, setExperimentsData] = React.useState(null);
+  const [deepDiveData, setDeepDiveData] = React.useState(null);
+  React.useEffect(() => {
+    dataRequest("/success-data").then(res =>
+      setSuccessStories(Object.values(res))
+    );
+  }, []);
 
   React.useEffect(() => {
-    dataRequest("http://localhost:3000/success-data").then(res =>
-      setSuccessStories(Object.values(res))
+    dataRequest("/experiments-data").then(res =>
+      setExperimentsData(Object.values(res))
+    );
+  }, []);
+
+  React.useEffect(() => {
+    dataRequest("/deep-dive-data").then(res =>
+      setDeepDiveData(res)
     );
   }, []);
 
@@ -47,8 +60,19 @@ function App() {
             path={urls.experiments}
             render={props => {
               setBackground("school");
-              return <Experiments />;
+              return <Experiments data={experimentsData} />;
             }}
+          />
+          <Route
+            exact
+            path={urls.experiment}
+            render={props =>
+              experimentsData ? (
+                <ExperimentSingle data={experimentsData} {...props} />
+              ) : (
+                <p>Loading...</p>
+              )
+            }
           />
           <Route
             exact
@@ -74,7 +98,7 @@ function App() {
             path={urls.deepdive}
             render={props => {
               setBackground("park");
-              return <Deepdive />;
+              return <Deepdive data={deepDiveData}/>;
             }}
           />
           <Route

@@ -1,12 +1,25 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Nav = styled.section`
-  padding-top: 700px;
-  margin-top: 500px;
+	margin: auto;
+	margin-top: 1200px;
+	width: 320px;
 `;
 
 const Main = styled.main`
-  width: 100%;
+	width: 100%;
 `;
 
-export { Nav, Main };
+const ButtonContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+`;
+
+const NavDescription = styled.div`
+	padding: 0.75em;
+  margin: 0.75em;
+  background-color: #fef2e3;
+  opacity: 0.8;
+`;
+
+export { Nav, Main, ButtonContainer, NavDescription };
