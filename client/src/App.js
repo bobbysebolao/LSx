@@ -54,7 +54,9 @@ function App() {
       <div className='App'>
         <Switch>
           <Route exact path={urls.home} render={props => <Landing />} />
-          <Route exact path={urls.action} render={props => <Form />} />
+          <Route exact path={urls.action} render={props => {
+          setBackground("postbox");
+          return <Form />}} />
           <Route
             exact
             path={urls.experiments}

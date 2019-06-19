@@ -5,6 +5,7 @@ import comicStore from "./content/comic-book-store-edited.svg";
 import park from "./content/park-background.svg";
 import school from "./content/school.svg";
 import flats from "./content/flats.svg";
+import postbox from "./content/postbox.svg"
 
 
 const background = ({ data }) => {
@@ -30,7 +31,11 @@ const background = ({ data }) => {
 
 		case 'school':
 			backStr = `url(${school})`;
-			break;
+      break;
+      
+      case 'postbox':
+        backStr = `url(${postbox})`;
+        break;
 
 		default:
 			backStr = '';

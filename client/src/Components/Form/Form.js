@@ -41,14 +41,14 @@ const Form = (props) => {
 	return (
 		<S.Wrapper>
 			<h2>Create an Action Plan & Email it to yourself</h2>
-			<h3>
+			<S.FormDetails>
 				All action starts with a plan - and we’re here to help you make yours!
 				Take the first step and complete this short form
-			</h3>
+			</S.FormDetails>
 
 			<S.FormEmail onSubmit={handleSubmit}>
 				<label>
-					name
+					What is your name?
 					<S.Input
 						name="ReceiverName"
 						type="text"
@@ -57,17 +57,17 @@ const Form = (props) => {
 					/>
 				</label>
 
-				<label>
-					email
+				<S.Label>
+					What is your email?
 					<S.Input
 						name="ReceiverEmail"
 						type="text"
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
 					/>
-				</label>
+				</S.Label>
 
-				<label>
+				<S.Label>
 					What do you want to change?
 					<S.Input
 						name="whatChange"
@@ -75,9 +75,9 @@ const Form = (props) => {
 						value={question1}
 						onChange={(e) => Setquestion1(e.target.value)}
 					/>
-				</label>
+				</S.Label>
 
-				<label>
+				<S.Label>
 					Why do you want to change it?
 					<S.Input
 						name="whyChange"
@@ -85,22 +85,22 @@ const Form = (props) => {
 						value={question2}
 						onChange={(e) => Setquestion2(e.target.value)}
 					/>
-				</label>
+				</S.Label>
 
-				<label>
+				<S.Label>
 					Who's behaviour do you want to change?
-					<textarea
+					<S.Textarea
 						name="whoChange"
 						type="text"
-						placeholder="Put yourself in their shoes &#13;&#10;
-                         Why do people behave this way &#13;&#10;
+						placeholder="Put yourself in their shoes.                 
+                         Why do people behave this way?
                          What would make them change?"
 						value={question3}
 						onChange={(e) => Setquestion3(e.target.value)}
 					/>
-				</label>
+				</S.Label>
 
-				<label>
+				<S.Label>
 					What barriers do you foresee?
 					<S.Input
 						name="whatBarriers"
@@ -108,9 +108,9 @@ const Form = (props) => {
 						value={question4}
 						onChange={(e) => Setquestion4(e.target.value)}
 					/>
-				</label>
+				</S.Label>
 
-				<label>
+				<S.Label>
 					How will you communicate your message?
 					<S.Input
 						name="howChange"
@@ -118,7 +118,7 @@ const Form = (props) => {
 						value={question5}
 						onChange={(e) => Setquestion5(e.target.value)}
 					/>
-				</label>
+				</S.Label>
 
 				<Submit type="submit">
 					Submit
