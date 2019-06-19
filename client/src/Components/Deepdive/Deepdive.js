@@ -3,7 +3,6 @@ import * as S from "./Deepdive.style";
 import { ReactComponent as ParkDetail } from "../../content/park-foreground.svg";
 import { Button } from "../Buttons/Button.js";
 const Deepdive = ({ data }) => {
- 
   return (
     <S.Main>
       <h2>Dive deeper into the data</h2>
@@ -13,7 +12,7 @@ const Deepdive = ({ data }) => {
         <p>{data ? data[0]["end"] : `Loading`}</p>
         <Button link="/#signpost">Back</Button>
       </S.Container>
-      <ParkDetail />
+      <S.ForegroundContainer />
     </S.Main>
   );
 };
