@@ -22,6 +22,10 @@ const background = ({ data }) => {
 
 		case 'school':
 			backStr = `url(${school})`;
+			break;
+
+		default:
+			backStr = '';
 	}
 
 	return backStr;
@@ -42,6 +46,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        text-align: center;
         margin: 0;
         height: 1948px;
         font-family: "Lato", sans-serif;
