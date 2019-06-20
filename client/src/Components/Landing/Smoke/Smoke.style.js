@@ -28,7 +28,7 @@ const SmokeContainer = styled.div`
 	width: 1px;
 	height: 160px;
 	left: 50%;
-	bottom: 7.3%;
+	top: 580px;
 `;
 
 const SmokeBalls = styled.span`
