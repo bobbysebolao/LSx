@@ -15,6 +15,7 @@ const Header = styled.header`
 `;
 
 const Board = styled.div`
+  margin-top: 20px;
   margin-bottom: 25px;
 `;
 
