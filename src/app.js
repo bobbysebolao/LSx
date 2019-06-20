@@ -3,6 +3,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const compresion = require("compression");
 const helmet = require("helmet");
+const { check, validationResult } = require("express-validator/check");
 
 const sendActionPlan = require("./sendActionPlan");
 const fetchSuccessData = require("./getSuccessStories");
@@ -58,12 +59,31 @@ app.post("/send", (req, res, next) => {
   req.on("end", function() {
     // Assuming, we're receiving JSON, parse the string into a JSON object to return.
     var data = JSON.parse(content);
-    sendActionPlan(data.name, data.email, data.answers)
-      .then(result => res.send(result))
-      .catch(err => res.send({ failure: 500, error: err }));
+
+    check("name")
+      .not()
+      .isEmpty()
+      .trim()
+      .escape()
+      .withMessage("You should input your name"),
+      check("email")
+        .exists()
+        .isEmail()
+        .escape()
+        .withMessage("Your should input a email");
+
+    const errors = validationResult(data);
+
+    if (!errors.isEmpty()) {
+      return res.status(422).jsonp(errors.array());
+    } else {
+      sendActionPlan(data.name, data.email, data.answers)
+        .then(result => res.send(result))
+        .catch(err => res.send({ failure: 500, error: err }));
+    }
   });
-  // insert rest of form inputs
 });
+// insert rest of form inputs
 
 app.set("PORT", process.env.PORT || 9000);
 
