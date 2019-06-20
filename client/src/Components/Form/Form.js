@@ -12,9 +12,13 @@ const Form = props => {
   const [question4, Setquestion4] = React.useState("");
   const [question5, Setquestion5] = React.useState("");
 
+  const red = {
+    color: "red"
+  };
+
   const handleSubmit = e => {
     e.preventDefault();
-    console.log("we are in handlesubmit", name, email);
+
     fetch("/send", {
       method: "post",
       body: JSON.stringify({
@@ -30,14 +34,21 @@ const Form = props => {
       })
     })
       .then(response => response.json())
-      .then(json => console.log("handleSubmit: ", json))
-      .then(() =>
-        Swal.fire(
-          "Submitted!",
-          "Check your email for your action plan",
-          "success"
-        )
-      );
+      .then(res => {
+        if (res !== 200) {
+          Swal.fire(
+            "Send Failure!",
+            "Please check your email is valid and <br/> internet connection is live",
+            "error"
+          );
+        } else {
+          Swal.fire(
+            "Submitted!",
+            "Check your email for your action plan",
+            "success"
+          );
+        }
+      });
   };
 
   return (
@@ -60,7 +71,7 @@ const Form = props => {
         </label>
 
         <S.Label>
-          What is your email?
+          What is your email?<sup style={red}>*</sup>
           <S.Input
             name='ReceiverEmail'
             type='email'
