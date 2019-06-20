@@ -102,7 +102,7 @@ const Form = props => {
         </S.Label>
 
         <S.Label>
-          Who's behaviour do you want to change?
+          Whose behaviour do you want to change?
           <S.Textarea
             name='whoChange'
             type='text'
@@ -134,7 +134,7 @@ const Form = props => {
           />
         </S.Label>
 
-        <Submit className='asds' type='submit'>
+        <Submit type='submit'>
           Submit
         </Submit>
         <Button link='/#signpost'>Back</Button>
