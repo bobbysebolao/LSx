@@ -34,4 +34,9 @@ const Submit = styled(Button)`
         box-shadow: 0 4px #28546a;
 `;
 
-export { Button, Submit };
+const ButtonLink = styled.a`
+	width: auto;
+	margin: auto;
+`;
+
+export { Button, Submit, ButtonLink };
