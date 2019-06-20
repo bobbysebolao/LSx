@@ -9,7 +9,7 @@ const Sign = props => {
       height="650.174"
       viewBox="0 0 296 650.174"
     >
-      <g id="signpost">
+      <g id="sign-post">
         <path
           id="pole"
           fill="#3D7E9E"
