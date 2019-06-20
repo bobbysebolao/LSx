@@ -8,7 +8,7 @@ import {
 } from "./SharePeople/SharePeople";
 import {
   BalloonFb,
-  BalloonEmail,
+  BalloonInsta,
   BalloonGov,
   BalloonTwitter
 } from "./Balloons/Balloons";
@@ -77,7 +77,7 @@ const Share = props => {
           </S.ChatBoundary>
         </S.SpeechBubbleContainer>
         <BalloonFb />
-        <BalloonEmail />
+        <BalloonInsta />
         <S.SocialsPrompt>
           Share your story via Facebook, email, Twitter, Petitions.gov
         </S.SocialsPrompt>
