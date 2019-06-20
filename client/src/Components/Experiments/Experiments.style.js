@@ -14,7 +14,9 @@ const Header = styled.header`
   border-radius: 5px;
 `;
 
-const Board = styled.div``;
+const Board = styled.div`
+  margin-bottom: 25px;
+`;
 
 const Link = styled.a`
   font-family: 'Fredericka the Great', cursive;
@@ -34,7 +36,7 @@ const Link = styled.a`
 
 &:hover {
   text-decoration: underline;
-  
+
 }
 
 &:active {
