@@ -18,12 +18,16 @@ const Stories = ({ data }) => {
         {data
           ? data.map((k, i) => (
               <a href={hyphenate(`/story/${k["title"]}`).toLowerCase()} key={i}>
-                <S.Comic />
+                <S.Comic>
+                  <S.HeaderArticle>
+                    <S.Issue>ISSUE #{i + 1}</S.Issue>
+                  </S.HeaderArticle>
+                </S.Comic>
               </a>
             ))
           : null}
       </S.Shelf>
-      <Button link="/#signpost">Back</Button>
+      <Button link='/#signpost'>Back</Button>
     </S.Main>
   );
 };
