@@ -18,9 +18,13 @@ const Sign = props => {
           strokeLinecap="butt"
           d="M137.449,72.372v541.826v35.658c11.732,13.647,21.092,0,21.092,0v-35.658V72.372H137.449z"
         />
-        <g id="top" fill="#3D7E9E"  stroke="black"
+        <g
+          id="top"
+          fill="#3D7E9E"
+          stroke="black"
           strokeWidth="2"
-          strokeLinecap="butt">
+          strokeLinecap="butt"
+        >
           <rect x="140.186" y="31.542" width="15.619" height="9.806" />
           <path d="M140.172,41.347h15.617c1.023,7.027,7.654,9.927,8.201,12.385c0.539,2.385-5.398,4.76-5.398,4.76h-21.094 c0,0-5.533-2.395-5.533-4.841C131.965,51.201,137.498,49.522,140.172,41.347z" />
           <path d="M135.631,26.709c1.646-2.352,8.912-9.869,11.145-25.788c0-1.229,2.232-1.229,2.232,0 c2.23,15.919,9.229,22.99,11.369,26.098c2.084,3.03-4.676,4.522-4.676,4.522h-15.619C140.082,31.542,133.527,29.72,135.631,26.709 z" />
@@ -44,12 +48,10 @@ const Sign = props => {
             y="50.5%"
             fill="white"
             stroke="black"
-            strokeWidth="0.5"
+            strokeWidth="0.3"
             strokeLinecap="butt"
             style={{
-              textAnchor: "start",
-              fontWeight: "bold",
-              fontSize: "1.2em"
+              textAnchor: "start"
             }}
           >
             Start planning
@@ -78,8 +80,8 @@ const Sign = props => {
           y="43.5%"
           fill="white"
           stroke="black"
-            strokeWidth="0.3"
-            strokeLinecap="butt"
+          strokeWidth="0.3"
+          strokeLinecap="butt"
           style={{
             textAnchor: "end"
           }}
