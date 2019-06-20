@@ -22,4 +22,11 @@ const Modal = ({ children }) => {
   );
 };
 
-export { OpenModal, Modal };
+const ModalAction = ({ children }) => {
+  return ReactDOM.createPortal(
+    <S.ModalAction>{children}</S.ModalAction>,
+    document.getElementById("modal-root-action-planner")
+  );
+};
+
+export { OpenModal, Modal, ModalAction };
