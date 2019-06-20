@@ -4,7 +4,7 @@ import comicStore from "./content/comic-book-store-edited.svg";
 import park from "./content/park-background.svg";
 import school from "./content/school.svg";
 import flats from "./content/flats.svg";
-import postbox from "./content/postbox.svg"
+import postbox from "./content/postbox.svg";
 
 const background = ({ data }) => {
   let backStr = "";
@@ -26,14 +26,13 @@ const background = ({ data }) => {
       backStr = `url(${flats})`;
       break;
 
-		case 'school':
-			backStr = `url(${school})`;
-      break;
-      
-    case 'postbox':
-      backStr = `url(${postbox})`;
+    case "school":
+      backStr = `url(${school})`;
       break;
 
+    case "postbox":
+      backStr = `url(${postbox})`;
+      break;
 
     default:
       backStr = "";
@@ -58,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         text-align: center;
         margin: 0;
-        height: 1948px;
+        height: 1000px;
         font-family: "Lato", sans-serif;
     }
 
