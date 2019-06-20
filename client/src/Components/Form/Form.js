@@ -17,8 +17,9 @@ const Form = props => {
   };
 
   const handleSubmit = e => {
+    const Button = document.querySelector("Button");
+    Button.textContent = "Loading...";
     e.preventDefault();
-
     fetch("/send", {
       method: "post",
       body: JSON.stringify({
@@ -48,6 +49,7 @@ const Form = props => {
             "success"
           );
         }
+        Button.textContent = "Submit";
       });
   };
 
@@ -58,7 +60,6 @@ const Form = props => {
         All action starts with a plan - and we’re here to help you make yours!
         Take the first step and complete this short form
       </S.FormDetails>
-
       <S.FormEmail onSubmit={handleSubmit}>
         <label>
           What is your name?
@@ -133,7 +134,9 @@ const Form = props => {
           />
         </S.Label>
 
-        <Submit type='submit'>Submit</Submit>
+        <Submit className='asds' type='submit'>
+          Submit
+        </Submit>
         <Button link='/#signpost'>Back</Button>
       </S.FormEmail>
     </S.Wrapper>
