@@ -12,9 +12,14 @@ const Form = props => {
   const [question4, Setquestion4] = React.useState("");
   const [question5, Setquestion5] = React.useState("");
 
+  const red = {
+    color: "red"
+  };
+
   const handleSubmit = e => {
+    const Button = document.querySelector("Button");
+    Button.textContent = "Loading...";
     e.preventDefault();
-    console.log("we are in handlesubmit", name, email);
     fetch("/send", {
       method: "post",
       body: JSON.stringify({
@@ -30,14 +35,22 @@ const Form = props => {
       })
     })
       .then(response => response.json())
-      .then(json => console.log("handleSubmit: ", json))
-      .then(() =>
-        Swal.fire(
-          "Submitted!",
-          "Check your email for your action plan",
-          "success"
-        )
-      );
+      .then(res => {
+        if (res !== 200) {
+          Swal.fire(
+            "Send Failure!",
+            "Please check your email is valid and <br/> internet connection is live",
+            "error"
+          );
+        } else {
+          Swal.fire(
+            "Submitted!",
+            "Check your email for your action plan",
+            "success"
+          );
+        }
+        Button.textContent = "Submit";
+      });
   };
 
   return (
@@ -47,7 +60,6 @@ const Form = props => {
         All action starts with a plan - and we’re here to help you make yours!
         Take the first step and complete this short form
       </S.FormDetails>
-
       <S.FormEmail onSubmit={handleSubmit}>
         <label>
           What is your name?
@@ -60,7 +72,7 @@ const Form = props => {
         </label>
 
         <S.Label>
-          What is your email?
+          What is your email?<sup style={red}>*</sup>
           <S.Input
             name='ReceiverEmail'
             type='email'
@@ -122,7 +134,9 @@ const Form = props => {
           />
         </S.Label>
 
-        <Submit type='submit'>Submit</Submit>
+        <Submit className='asds' type='submit'>
+          Submit
+        </Submit>
         <Button link='/#signpost'>Back</Button>
       </S.FormEmail>
     </S.Wrapper>

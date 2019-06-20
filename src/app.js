@@ -79,7 +79,7 @@ app.post("/send", (req, res, next) => {
     } else {
       sendActionPlan(data.name, data.email, data.answers)
         .then(result => res.send(result))
-        .catch(err => res.send({ failure: 500, error: err }));
+        .catch(err => res.send(err));
     }
   });
 });
