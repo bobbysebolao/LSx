@@ -1,16 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Main = styled.main`
-	margin: auto;
-	margin-top: 0px;
-	width: 320px;
+  margin: auto;
+  margin-top: 0px;
+  width: 320px;
 `;
 
 const Header = styled.header`
-	padding: 0.5em;
-	margin: 0.75em;
-	background-color: #fef2e3;
-	opacity: 0.8;
+  padding: 0.5em;
+  margin: 0.75em;
+  background-color: #fef2e3;
+  opacity: 0.8;
+  border-radius: 5px;
 `;
 
 const Board = styled.div``;
@@ -24,6 +25,7 @@ const Link = styled.a`
   display: inline-block;
   text-decoration: none;
   color: white;
+  border-radius: 5px;
 }
 
 &:visited {
