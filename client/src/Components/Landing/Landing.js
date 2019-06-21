@@ -4,6 +4,8 @@ import Clouds from "./Clouds/Clouds";
 import Smoke from "./Smoke/Smoke";
 import { ModalAction, Modal, OpenModal } from "../Modal/Modal";
 import Sign from "./Signpost/Sign";
+import { Bus } from "../Vehicles/Vehicles";
+import Oldlady from "../Oldlady/Oldlady.js";
 import * as S from "./Landing.style";
 import QuestionMark from "./QuestionMark/QuestionMark";
 
@@ -14,8 +16,8 @@ const Landing = props => {
       <h1>LSx</h1>
       <h2>Action Planner</h2>
       <S.ButtonContainer>
-        <Submit link='#signpost'> Start Learning </Submit>
-        <Button link='/action-plan'> Make Action Plan </Button>
+        <Submit link="#signpost"> Start Learning </Submit>
+        <Button link="/action-plan"> Make Action Plan </Button>
         <OpenModal
           toggle={show => <QuestionMark visibility={show} />}
           content={hide => (
@@ -26,7 +28,7 @@ const Landing = props => {
                 <b> How Can You Achieve Better Air Quality as a Community?</b>
               </h3>
               <p>
-                <S.Link href='http://www.lsx.org.uk/' /> Once you have
+                <S.Link href="http://www.lsx.org.uk/" /> Once you have
                 identified air pollution hotspots in your local area, you can
                 start thinking about how you can help reduce air pollution
                 emissions and exposure. There are several routes to take, which
@@ -37,7 +39,13 @@ const Landing = props => {
         />
       </S.ButtonContainer>
       <Smoke />
-      <S.Nav id='signpost'>
+      <S.OldladyContainer>
+        <Oldlady />
+      </S.OldladyContainer>
+      <S.BusContainer>
+        <Bus />
+      </S.BusContainer>
+      <S.Nav id="signpost">
         <S.NavDescription>
           <h2>Home</h2>
           <h3>
@@ -53,7 +61,7 @@ const Landing = props => {
               <S.Button onClick={hide}>X</S.Button>
               <h2>About LSx</h2>
               <p>
-                <S.Link href='http://www.lsx.org.uk/'>
+                <S.Link href="http://www.lsx.org.uk/">
                   London Sustainability Exchange
                 </S.Link>{" "}
                 is a “think and do” charity which creates collaborations that

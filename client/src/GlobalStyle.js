@@ -52,6 +52,7 @@ const GlobalStyle = createGlobalStyle`
         background-attachment: scroll;
         background-position: top center;
         scroll-behavior: smooth;
+        overflow-x: hidden;
     }
 
     body {

@@ -6,8 +6,6 @@ const Bus = props => {
       <svg
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
-        width="1362.428"
-        height="713.077"
         viewBox="0 0 1362.428 713.077"
       >
         <g id="bus">

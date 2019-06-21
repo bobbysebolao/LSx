@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Nav = styled.section`
   margin: auto;
@@ -7,6 +7,7 @@ const Nav = styled.section`
 `;
 
 const Main = styled.main`
+  position: relative;
   width: 100%;
 `;
 
@@ -44,4 +45,40 @@ const Button = styled.button`
   border-radius: 5px;
 `;
 
-export { Nav, Main, ButtonContainer, NavDescription, Link, Button };
+const busDriving = keyframes`
+0% { transform: translateX(0px) }
+100% { transform: translateX(-9000px)}`;
+
+const BusContainer = styled.div`
+  position: absolute;
+  width: 1300px;
+  top: 1500px;
+  left: 5500px;
+  z-index: -1;
+  animation: ${busDriving} 9s infinite;
+  animation-timing-function: linear;
+`;
+
+const oldLadyWalking = keyframes`
+0% { transform: translateX(0px) }
+100% { transform: translateX(1500px)}`;
+
+const OldladyContainer = styled.div`
+  position: absolute;
+  top: 1900px;
+  left: -800px;
+  right: 0;
+  z-index: -2;
+  animation: ${oldLadyWalking} 25s steps(25) infinite;
+`;
+
+export {
+  Nav,
+  Main,
+  ButtonContainer,
+  NavDescription,
+  Link,
+  Button,
+  BusContainer,
+  OldladyContainer
+};
