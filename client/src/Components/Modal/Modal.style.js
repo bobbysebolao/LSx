@@ -4,8 +4,8 @@ const Modal = styled.section`
   width: 300px;
   padding: 30px;
   position: fixed;
-  left: 20%;
-  right: 20%;
+  left: 0;
+  right: 0;
   bottom: 25%;
   background-color: white;
   margin: auto;
@@ -18,9 +18,9 @@ const ModalAction = styled.section`
   width: 300px;
   padding: 30px;
   position: fixed;
-  left: 20%;
-  right: 20%;
-  bottom: 50%;
+  left: 0;
+  right: 0;
+  top: 5.6em;
   background-color: white;
   margin: auto;
   border: 1px solid;
