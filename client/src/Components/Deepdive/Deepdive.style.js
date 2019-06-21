@@ -15,7 +15,7 @@ const Container = styled.div`
   margin: auto;
   background-color: rgba(254, 242, 227, 0.8);
   border-radius: 5px;
-  z-index: 5;
+  z-index: 6;
 `;
 
 const ForegroundContainer = styled.div`
@@ -31,7 +31,7 @@ const ForegroundContainer = styled.div`
   left: 0;
   right: 0;
   margin: auto;
-  z-index: 4;
+  z-index: 5;
 `;
 
 const Info = styled.p`
@@ -44,15 +44,21 @@ const Info = styled.p`
 
 const InfoOne = styled(Info)`
   margin-top: 370px;
-  z-index: 3;
+  z-index: 4;
 `;
 
 const InfoTwo = styled(Info)`
   margin-top: 80px;
-  z-index: 2;
+  z-index: 3;
 `;
 
 const InfoThree = styled(Info)`
+  margin-top: 80px;
+  margin-bottom: 30px;
+  z-index: 2;
+`;
+
+const Resources = styled(Info)`
   margin-top: 80px;
   margin-bottom: 30px;
   z-index: 1;
@@ -70,5 +76,6 @@ export {
   InfoOne,
   InfoTwo,
   InfoThree,
+  Resources,
   ButtonContainer
 };
