@@ -58,4 +58,17 @@ const InfoThree = styled(Info)`
   z-index: 1;
 `;
 
-export { Main, Container, ForegroundContainer, InfoOne, InfoTwo, InfoThree };
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export {
+  Main,
+  Container,
+  ForegroundContainer,
+  InfoOne,
+  InfoTwo,
+  InfoThree,
+  ButtonContainer
+};
