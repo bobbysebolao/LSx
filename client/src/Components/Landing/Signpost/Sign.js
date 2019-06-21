@@ -94,11 +94,7 @@ const Sign = props => {
           target="_top"
           className="sign-surface-selector"
           fill="#3D7E9E"
-          stroke="black"
-          strokeWidth="2"
           strokeLinecap="butt"
-          opacity="0"
-          style={{ cursor: "pointer" }}
           points="13.213,254.227 0,276.723 13.213,299.227 158.541,299.227 158.541,298.096 158.541,295.848 158.541,257.598 158.541,255.348 158.541,254.227"
         />
 

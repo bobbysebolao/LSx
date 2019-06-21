@@ -81,6 +81,22 @@ const GlobalStyle = createGlobalStyle`
 			margin-bottom: 0.5em;
     }
 
+    &.sign-surface-selector {
+        fill: #2F6783;
+        fill-opacity: 0;
+        stroke: #ffffff;
+        stroke-width: 0px;
+    }
+
+    &.sign-surface-selector:hover {
+            fill: #2F6783;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            fill-opacity: 0;
+            stroke: #ffffff;
+            stroke-width: 2px;
+            cursor: pointer;
+          }
 `;
 
 export default GlobalStyle;
