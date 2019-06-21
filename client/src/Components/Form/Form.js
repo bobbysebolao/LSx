@@ -47,7 +47,10 @@ const Form = props => {
     })
       .then(response => response.json())
       .then(res => {
-        if (res !== 200) {
+
+        console.log(res);
+
+        if (res.accepted.length !== 1) {
           Swal.fire(
             "Send Failure!",
             "Please check your email is valid and <br/> internet connection is live",
@@ -169,6 +172,8 @@ const Form = props => {
 
         <Submit type="submit">Submit</Submit>
         <Button link="/#signpost">Back</Button>
+
+        <p>Thank you for completing this form, your personal data will be kept in accordance with the requirements of the Data Protection Act (1998) and will only be used for the purpose of monitoring this project unless specified. The information that you have provided will not be shared with any other third-party organisations. </p>
       </S.FormEmail>
     </S.Wrapper>
   );

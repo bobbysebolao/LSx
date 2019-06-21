@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const compresion = require("compression");
 const helmet = require("helmet");
 const { check, validationResult } = require("express-validator/check");
+const escapeHtml =require('escape-html');
 
 const sendActionPlan = require("./sendActionPlan");
 const fetchSuccessData = require("./getSuccessStories");
@@ -74,10 +75,18 @@ app.post("/send", (req, res, next) => {
 
     const errors = validationResult(data);
 
+    const escapedAnswer ={   
+    q1: escapeHtml(data.answers.q1),
+    q2: escapeHtml(data.answers.q2),
+    q3: escapeHtml(data.answers.q3),
+    q4: escapeHtml(data.answers.q4),
+    q5: escapeHtml(data.answers.q5),
+    q6: escapeHtml(data.answers.q6) }
+
     if (!errors.isEmpty()) {
       return res.status(422).jsonp(errors.array());
     } else {
-      sendActionPlan(data.name, data.email, data.answers)
+      sendActionPlan(data.name, data.email, escapedAnswer)
         .then(result => res.send(result))
         .catch(err => res.send(err));
     }

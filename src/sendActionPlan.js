@@ -33,25 +33,31 @@ const sendActionPlan = (name, email, answers) => {
       <h1>Action Plan</h1>
      <h2>As a citizen scientist, I wish to make visbile the air polution and try and enact real <span style="text-decoration: underline;">change</span></h2>.</div>
         
-        <h3>I want to change:</h3>
+        <h3> The problem I would like to address :</h3>
         <p>${answers.q1}</p>
         
-        <h3>Why I want to change this:</h3>
+        <h3>Why I have chosen this problem:</h3>
         <p>${answers.q2}</p>
         
-        <h3>People involved:</h3>
+        <h3>I need to work with or engage with to solve this problem:</h3>
         <p>${answers.q3}</p>
         
-        <h3>Possible barriers:</h3>
+        <h3>What I need to do to achieve this:</h3>
         <p>${answers.q4}</p>
         
-        <h3>My plan for communicating my message:</h3>
+        <h3>How will I communicate my message:</h3>
         <p>${answers.q5}</p>
   
+        <h3>I agree to be signed up to the quarterly
+        Air Quality Bulletin to receive updates on our air pollution work:</h3>
+        <p>${answers.q6}</p>
+
         <p>
         See other action planing ideas for inspiration which is attached as a pdf. 
         For the LSx Action Planning toolkit please email comms@lsx.org.uk.</p>
-      `
+
+
+      <p>Thank you for completing this form, your personal data will be kept in accordance with the requirements of the Data Protection Act (1998) and will only be used for the purpose of monitoring this project unless specified. The information that you have provided will not be shared with any other third-party organisations. </p>`
     };
   
     transporter
