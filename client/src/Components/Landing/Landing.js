@@ -4,8 +4,6 @@ import Clouds from "./Clouds/Clouds";
 import Smoke from "./Smoke/Smoke";
 import { ModalAction, Modal, OpenModal } from "../Modal/Modal";
 import Sign from "./Signpost/Sign";
-import { Bus } from "../Vehicles/Vehicles";
-import Oldlady from "../Oldlady/Oldlady.js";
 import * as S from "./Landing.style";
 import QuestionMark from "./QuestionMark/QuestionMark";
 
@@ -39,12 +37,6 @@ const Landing = props => {
         />
       </S.ButtonContainer>
       <Smoke />
-      <S.OldladyContainer>
-        <Oldlady />
-      </S.OldladyContainer>
-      <S.BusContainer>
-        <Bus />
-      </S.BusContainer>
       <S.Nav id="signpost">
         <S.NavDescription>
           <h2>Home</h2>

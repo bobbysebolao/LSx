@@ -58,7 +58,6 @@ const GlobalStyle = createGlobalStyle`
     body {
         text-align: center;
         margin: 0;
-        height: 1000px;
         font-family: "Lato", sans-serif;
     }
 

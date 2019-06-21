@@ -18,9 +18,12 @@ const Story = props => {
     }
   };
 
-  React.useEffect(() => {
-    selectStory(props);
-  }, [props]);
+  React.useEffect(
+    () => {
+      selectStory(props);
+    },
+    [props]
+  );
 
   if (storyData) {
     console.log("storyData = ", storyData);
@@ -39,22 +42,18 @@ const Story = props => {
       <h2>{storyData ? storyData["title"] : `Loading`}</h2>
       <section>
         <ul>
-          <li>
-            {storyData
-              ? storyData["Key Points (each one on new line)"]
-              : `Loading`}
-          </li>
-          <li>Lorem ipsum dolor sit amet</li>
-          <li>Lorem ipsum dolor sit amet</li>
+          <li>{storyData ? storyData["key-point-1"] : `Loading`}</li>
+          <li>{storyData ? storyData["key-point-2"] : `Loading`}</li>
+          <li>{storyData ? storyData["key-point-3"] : `Loading`}</li>
         </ul>
       </section>
       <img
-        width='100%'
+        width="100%"
         src={storyData ? `${storyData["image"][0]["url"]}` : ``}
-        alt='description'
+        alt="description"
       />
-      <section>{storyData ? storyData["Description"] : `Loading`}</section>
-      <Button link='/success-stories'>Back</Button>
+      <section>{storyData ? storyData["description"] : `Loading`}</section>
+      <Button link="/success-stories">Back</Button>
     </S.Wrapper>
   );
 };

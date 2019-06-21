@@ -4,6 +4,7 @@ const Nav = styled.section`
   margin: auto;
   margin-top: 950px;
   width: 320px;
+  overflow: hidden;
 `;
 
 const Main = styled.main`
