@@ -17,14 +17,12 @@ const Form = props => {
     color: "red"
   };
 
-
-  const handleCheckBox= (event) => {
+  const handleCheckBox = event => {
     const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    const name = target.name;
+    const value = target.type === "checkbox" ? target.checked : target.value;
 
-    Setquestion6(value)
-  }
+    Setquestion6(value);
+  };
 
   const handleSubmit = e => {
     const Button = document.querySelector("Button");
@@ -47,7 +45,6 @@ const Form = props => {
     })
       .then(response => response.json())
       .then(res => {
-
         console.log(res);
 
         if (res.accepted.length !== 1) {
@@ -73,8 +70,8 @@ const Form = props => {
       <S.FormDetails>
         All action starts with a plan - and we’re here to help you make yours!
         Take the first step and complete this short form
-        </S.FormDetails>
-        <S.FormDetails>
+      </S.FormDetails>
+      <S.FormDetails>
         Have a think about the specific air pollution problem that you would
         like to address and this tool should help you think about the best ways
         to go about it. If you aren’t sure about how to respond to a question,
@@ -103,8 +100,8 @@ const Form = props => {
         </S.Label>
 
         <S.Label>
-          What is the problem you would like to address? (e.g. idling vehicles
-          outside my school)
+          What is the problem you would like to address?<S.SmallerText>e.g. idling vehicles
+          outside my school</S.SmallerText> 
           <S.Input
             name="whatChange"
             type="text"
@@ -114,9 +111,9 @@ const Form = props => {
         </S.Label>
 
         <S.Label>
-          Why have you chosen this problem? (e.g. because lots of parents wait
-          for pupils with their engines running)
-          <S.Input
+          Why have you chosen this problem?<S.SmallerText>e.g. because lots of parents wait
+          for pupils with their engines running</S.SmallerText> 
+          <S.Textarea
             name="whyChange"
             type="text"
             value={question2}
@@ -125,22 +122,19 @@ const Form = props => {
         </S.Label>
 
         <S.Label>
-          Who would you need to work with or engage to solve this problem? (e.g.
-          parents at school, teachers, local council)
-          <S.Textarea
+          Who would you need to work with or engage to solve this problem? <S.SmallerText>e.g.
+          parents at school, teachers, local council</S.SmallerText>
+          <S.Input
             name="whoChange"
             type="text"
-            placeholder="Put yourself in their shoes.                 
-                         Why do people behave this way?
-                         What would make them change?"
             value={question3}
             onChange={e => Setquestion3(e.target.value)}
           />
         </S.Label>
 
         <S.Label>
-          What will you need to do to achieve this? (e.g. run an anti-idling
-          campaign outside school to talk to parents)
+          What will you need to do to achieve this? <S.SmallerText>e.g. run an anti-idling
+          campaign outside school to talk to parents</S.SmallerText>
           <S.Input
             name="whatBarriers"
             type="text"
@@ -150,8 +144,8 @@ const Form = props => {
         </S.Label>
 
         <S.Label>
-          How will you communicate your message? (e.g. social media, posters,
-          assemblies, meetings with policy-makers)
+          How will you communicate your message?<S.SmallerText>e.g. social media, posters,
+          assemblies, meetings with policy-makers</S.SmallerText> 
           <S.Input
             name="howChange"
             type="text"
@@ -161,19 +155,25 @@ const Form = props => {
         </S.Label>
         <S.Label>
           By ticking the box you are agreeing to be signed up to our quarterly
-          Air Quality Bulletin to receive updates on our air pollution work. You
-          can unsubscribe at any time
-          <input
+          Air Quality Bulletin to receive updates on our air pollution work.
+          <S.Checkedinput
             name="isGoing"
             type="checkbox"
             checked={question6}
-            onChange={e => handleCheckBox(e)}/>
+            onChange={e => handleCheckBox(e)}
+          />
         </S.Label>
-
+        <S.SmallerText> You can unsubscribe at any time</S.SmallerText>
         <Submit type="submit">Submit</Submit>
         <Button link="/#signpost">Back</Button>
 
-        <p>Thank you for completing this form, your personal data will be kept in accordance with the requirements of the Data Protection Act (1998) and will only be used for the purpose of monitoring this project unless specified. The information that you have provided will not be shared with any other third-party organisations. </p>
+        <S.DisclamerText>
+          Thank you for completing this form, your personal data will be kept in
+          accordance with the requirements of the Data Protection Act (1998) and
+          will only be used for the purpose of monitoring this project unless
+          specified. The information that you have provided will not be shared
+          with any other third-party organisations.{" "}
+        </S.DisclamerText>
       </S.FormEmail>
     </S.Wrapper>
   );

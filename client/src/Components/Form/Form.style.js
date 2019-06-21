@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const Wrapper = styled.div`
   position: relative;
   margin: auto;
@@ -19,6 +18,13 @@ const Input = styled.input`
   border-radius: 5px;
 `;
 
+const Checkedinput = styled.input`
+  margin: 5px;
+  height: 16px;
+  width: 16px;
+  border-radius: 5px;
+`;
+
 const Label = styled.label`
   padding: 5px;
   padding-bottom: 0.7em;
@@ -33,7 +39,7 @@ const FormEmail = styled.form`
 `;
 
 const FormDetails = styled.h3`
-margin-top: 10px;
+  margin-top: 10px;
 `;
 const Textarea = styled.textarea`
   margin: 5px;
@@ -49,4 +55,22 @@ const Textarea = styled.textarea`
   border-image: initial;
 `;
 
-export { Wrapper, Input, FormEmail, Textarea, Label, FormDetails };
+const DisclamerText = styled.p`
+  font-size: 0.5em;
+`;
+const SmallerText = styled.p`
+  margin: 0;
+  font-size: 0.8em;
+`;
+
+export {
+  Wrapper,
+  Input,
+  FormEmail,
+  Textarea,
+  Label,
+  FormDetails,
+  SmallerText,
+  DisclamerText,
+  Checkedinput
+};
