@@ -56,7 +56,7 @@ const Textarea = styled.textarea`
 `;
 
 const DisclamerText = styled.p`
-  font-size: 0.5em;
+  font-size: 1em;
 `;
 const SmallerText = styled.p`
   margin: 0;

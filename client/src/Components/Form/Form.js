@@ -11,7 +11,7 @@ const Form = props => {
   const [question3, Setquestion3] = React.useState("");
   const [question4, Setquestion4] = React.useState("");
   const [question5, Setquestion5] = React.useState("");
-  const [question6, Setquestion6] = React.useState(true);
+  const [question6, Setquestion6] = React.useState(false);
 
   const red = {
     color: "red"
@@ -100,8 +100,8 @@ const Form = props => {
         </S.Label>
 
         <S.Label>
-          What is the problem you would like to address?<S.SmallerText>e.g. idling vehicles
-          outside my school</S.SmallerText> 
+          What is the problem you would like to address?
+          <S.SmallerText>e.g. idling vehicles outside my school</S.SmallerText>
           <S.Input
             name="whatChange"
             type="text"
@@ -111,8 +111,11 @@ const Form = props => {
         </S.Label>
 
         <S.Label>
-          Why have you chosen this problem?<S.SmallerText>e.g. because lots of parents wait
-          for pupils with their engines running</S.SmallerText> 
+          Why have you chosen this problem?
+          <S.SmallerText>
+            e.g. because lots of parents wait for pupils with their engines
+            running
+          </S.SmallerText>
           <S.Textarea
             name="whyChange"
             type="text"
@@ -122,8 +125,10 @@ const Form = props => {
         </S.Label>
 
         <S.Label>
-          Who would you need to work with or engage to solve this problem? <S.SmallerText>e.g.
-          parents at school, teachers, local council</S.SmallerText>
+          Who would you need to work with or engage to solve this problem?{" "}
+          <S.SmallerText>
+            e.g. parents at school, teachers, local council
+          </S.SmallerText>
           <S.Input
             name="whoChange"
             type="text"
@@ -133,8 +138,10 @@ const Form = props => {
         </S.Label>
 
         <S.Label>
-          What will you need to do to achieve this? <S.SmallerText>e.g. run an anti-idling
-          campaign outside school to talk to parents</S.SmallerText>
+          What will you need to do to achieve this?{" "}
+          <S.SmallerText>
+            e.g. run an anti-idling campaign outside school to talk to parents
+          </S.SmallerText>
           <S.Input
             name="whatBarriers"
             type="text"
@@ -144,8 +151,10 @@ const Form = props => {
         </S.Label>
 
         <S.Label>
-          How will you communicate your message?<S.SmallerText>e.g. social media, posters,
-          assemblies, meetings with policy-makers</S.SmallerText> 
+          How will you communicate your message?
+          <S.SmallerText>
+            e.g. social media, posters, assemblies, meetings with policy-makers
+          </S.SmallerText>
           <S.Input
             name="howChange"
             type="text"
