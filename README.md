@@ -214,6 +214,6 @@ We used the creat react App as a base for our client side rendering and a expres
 
 ## Preview
 
-![](https://i.imgur.com/5AVbl5A.png)
+![](https://i.imgur.com/lLJpxng.png)
 
 
