@@ -1,6 +1,11 @@
 The LSx Action Planner
 ===
 
+[![Build Status](https://travis-ci.com/FAC-Sixteen/LSx.svg?branch=master)](https://travis-ci.com/FAC-Sixteen/LSx)
+
+Client project for Weeks 14-16 of Founders and Coders
+
+Heroku App: http://fac16-lsx-action-planner.herokuapp.com/
 
 ## The Team
 
