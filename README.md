@@ -2,12 +2,11 @@ The LSx Action Planner
 ===
 
 
-
 ## The Team
 
 ![](https://i.imgur.com/UmqNrFI.png)
 
----
+
 
 ## About London Sustainability Exchange 
 
@@ -16,8 +15,9 @@ London Sustainability Exchange (LSx) have been working with schools and communit
 They support people to design projects, campaigns and talk to policy makers and planners raising the importance of the issue locally. 
 Their aim is to use citizen science to help make the invisible, visible.
 
----
+
 ## Why
+
 
 This would be a great tool for LSx's projects, the schools and communities we work with. We'd like to update our tools and our toolkits in this way to appeal to wider and new audiences, bringing together past, present and future projects. Potentially, we could grow the organization as the demand for citizen science tools is global.
 
@@ -51,7 +51,7 @@ A mobile based app to help users create an action plan, to organise and facilita
   - Another table is for success stories, again each row created an individual page  
   - A final table is the Dive deep into the data page, This has a single row, where each column represents different content on the page. 
  
- ---
+ 
  
 ## Setup
 
@@ -75,8 +75,7 @@ A mobile based app to help users create an action plan, to organise and facilita
  - The site will be maintained by the clients team
  - Their aim is to use it with schools
  - There is potential to apply for future grants using and building from this project
-
----
+ 
 
 ## Ideas for the next sprint.
 
