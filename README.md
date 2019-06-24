@@ -1,12 +1,7 @@
----
-title: 'The LSx Action Planner'
-disqus: hackmd
----
-
 The LSx Action Planner
 ===
 
----
+
 
 ## The Team
 
