@@ -32,8 +32,8 @@ Our user needs a way to be remotely supported when conducting air quality experi
 
 ### Key user journeys
 
-- I do not have data yet, and would like some help.
-- I have data and would like to understand more.
+- I do not have data yet, and would like some help
+- I have data and would like to understand more
 
 
 ### The solution
